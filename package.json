@@ -1,0 +1,22 @@
+{
+  "name": "frontend-mentor-challenges",
+  "version": "1.0.0",
+  "description": "Completed challenges from FrontEnd Mentor's challenges",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch main.scss -o style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BelumS/frontend-mentor-challenges.git"
+  },
+  "author": "Bel Sahn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BelumS/frontend-mentor-challenges/issues"
+  },
+  "homepage": "https://github.com/BelumS/frontend-mentor-challenges#readme",
+  "dependencies": {
+    "sass": "^1.52.3"
+  }
+}
