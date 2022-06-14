@@ -5,8 +5,23 @@
     height: $val;
 };
 
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexCenterColumn {
+    @include flexCenter;
+    flex-direction: column;
+}
+
+@mixin boxShadowBlack($x, $y, $al) {
+    box-shadow: 0 $x $y rgba(#000, $al);
+}
+
 @mixin respond($bp) {
-    @if ($bp == mobile) {
-        @media only screen and(max-width: var.$bp-mobile) { @content; }
+    @if ($bp == desktop) {
+        @media only screen and(min-width: var.$bp-desktop) { @content; }
     }
 }

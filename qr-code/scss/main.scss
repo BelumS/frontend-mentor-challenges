@@ -13,75 +13,72 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
 }
 
 body {
     font-family: 'Outfit', sans-serif;
+    background-color: var.$color-gray-light;
+    position: relative;
 }
 
 .container {
-    width: 100%;
-    background-color: var.$color-gray-light;
+   min-height: 100vh;
+   @include mix.flexCenter;
+   padding: 20px;
 }
 
 .card {
-    @include mix.box(max-content);
-    margin: 20rem auto;
     border: 1px solid #ddd;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 15px;
+    @include mix.flexCenterColumn;
     background-color: var.$color-white;
-    box-shadow: .1rem .1rem .1rem #ddd;
-    padding: 1rem;
+    @include mix.boxShadowBlack(25px, 25px, .05);
+    padding: 15px;
 
-    @include mix.respond(mobile) {
-        margin: 10rem auto;
-    }
+    // @include mix.respond(desktop) {
+    //     margin: 10rem auto;
+    // }
 
     &__top {
-        width: 25rem;
+        width: 290px;
 
-        @include mix.respond(mobile) {
-            width: 30rem;
-        }
+        // @include mix.respond(mobile) {
+        //     width: 300px;
+        // }
     }
 
     &__img {
         width: inherit;
         object-fit: cover;
-        border-radius: 1rem;
+        border-radius: 15px;
     }
 
     &__bottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 25rem;
+        @include mix.flexCenterColumn;
+        width: 300px;
         text-align: center;
-        padding: 2rem;
+        padding: 20px;
     }
 
     &__heading {
-        font-size: 1.7rem;
+        font-size: var.$font-size-xl;
         font-weight: 700;
     }
 
     &__text {
-        margin-top: 1rem;
-        font-size: 1.5rem;
+        margin-top: 10px;
+        font-size: 0.9375rem;
         font-weight: 400;
         color: var.$color-gray-light;
     }
 }
 
-.attribution { 
-    font-size: 1.1rem; 
-    text-align: center; 
+.attribution {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    font-size: var.$font-size-xs; 
+    transform: translateX(50%); 
 
     & a {
         color: hsl(228, 45%, 44%);

@@ -9,73 +9,67 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
 }
 
 body {
   font-family: "Outfit", sans-serif;
+  background-color: hsl(212deg, 45%, 89%);
+  position: relative;
 }
 
 .container {
-  width: 100%;
-  background-color: hsl(212deg, 45%, 89%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .card {
-  width: max-content;
-  height: max-content;
-  margin: 20rem auto;
   border: 1px solid #ddd;
-  border-radius: 1rem;
+  border-radius: 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: #FFF;
-  box-shadow: 0.1rem 0.1rem 0.1rem #ddd;
-  padding: 1rem;
-}
-@media only screen and (max-width: 23.44em) {
-  .card {
-    margin: 10rem auto;
-  }
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
+  padding: 15px;
 }
 .card__top {
-  width: 25rem;
-}
-@media only screen and (max-width: 23.44em) {
-  .card__top {
-    width: 30rem;
-  }
+  width: 290px;
 }
 .card__img {
   width: inherit;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 15px;
 }
 .card__bottom {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25rem;
+  flex-direction: column;
+  width: 300px;
   text-align: center;
-  padding: 2rem;
+  padding: 20px;
 }
 .card__heading {
-  font-size: 1.7rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 .card__text {
-  margin-top: 1rem;
-  font-size: 1.5rem;
+  margin-top: 10px;
+  font-size: 0.9375rem;
   font-weight: 400;
   color: hsl(212deg, 45%, 89%);
 }
 
 .attribution {
-  font-size: 1.1rem;
-  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  font-size: 0.75rem;
+  transform: translateX(50%);
 }
 .attribution a {
   color: hsl(228deg, 45%, 44%);
