@@ -1,0 +1,12 @@
+@use "../abstracts/var";
+
+@mixin box($val) {
+    width: $val;
+    height: $val;
+};
+
+@mixin respond($bp) {
+    @if ($bp == mobile) {
+        @media only screen and(max-width: var.$bp-mobile) { @content; }
+    }
+}

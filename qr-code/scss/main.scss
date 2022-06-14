@@ -1,0 +1,89 @@
+@use "../scss/abstracts/var";
+@use "../scss/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    width: 100%;
+    background-color: var.$color-gray-light;
+}
+
+.card {
+    @include mix.box(max-content);
+    margin: 20rem auto;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var.$color-white;
+    box-shadow: .1rem .1rem .1rem #ddd;
+    padding: 1rem;
+
+    @include mix.respond(mobile) {
+        margin: 10rem auto;
+    }
+
+    &__top {
+        width: 25rem;
+
+        @include mix.respond(mobile) {
+            width: 30rem;
+        }
+    }
+
+    &__img {
+        width: inherit;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25rem;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    &__heading {
+        font-size: 1.7rem;
+        font-weight: 700;
+    }
+
+    &__text {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var.$color-gray-light;
+    }
+}
+
+.attribution { 
+    font-size: 1.1rem; 
+    text-align: center; 
+
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
+}
