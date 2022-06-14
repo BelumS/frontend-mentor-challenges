@@ -19,12 +19,18 @@ body {
     font-family: 'Outfit', sans-serif;
     background-color: var.$color-gray-light;
     position: relative;
+    min-width: max-content;
+
+    @include mix.respond(desktop) {
+        min-width: 100vw;
+    }
 }
 
 .container {
-   min-height: 100vh;
-   @include mix.flexCenter;
+   @include mix.flexCenterColumn;
    padding: 20px;
+   min-width: max-content;
+   min-height: 100vh;
 }
 
 .card {
@@ -33,18 +39,10 @@ body {
     @include mix.flexCenterColumn;
     background-color: var.$color-white;
     @include mix.boxShadowBlack(25px, 25px, .05);
-    padding: 15px;
-
-    // @include mix.respond(desktop) {
-    //     margin: 10rem auto;
-    // }
+    padding: 20px;
 
     &__top {
         width: 290px;
-
-        // @include mix.respond(mobile) {
-        //     width: 300px;
-        // }
     }
 
     &__img {
@@ -74,13 +72,27 @@ body {
 }
 
 .attribution {
+    @include mix.flexCenter;
+    flex-flow: row wrap;
     position: absolute;
     bottom: 0;
     right: 50%;
-    font-size: var.$font-size-xs; 
     transform: translateX(50%); 
+    font-size: var.$font-size-xs;
+
+    &__profile {
+        margin-left: 3px;
+    }
+
+    & span {
+        @include mix.respond(mobile) {
+            display: table;
+        }
+    }
 
     & a {
+        display: inline-block;
+        margin-left: 1px;
         color: hsl(228, 45%, 44%);
     }
 }

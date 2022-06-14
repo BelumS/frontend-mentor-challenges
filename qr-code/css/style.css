@@ -15,14 +15,22 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: hsl(212deg, 45%, 89%);
   position: relative;
+  min-width: max-content;
+}
+@media only screen and (min-width: 90em) {
+  body {
+    min-width: 100vw;
+  }
 }
 
 .container {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 20px;
+  min-width: max-content;
+  min-height: 100vh;
 }
 
 .card {
@@ -34,7 +42,7 @@ body {
   flex-direction: column;
   background-color: #FFF;
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
-  padding: 15px;
+  padding: 20px;
 }
 .card__top {
   width: 290px;
@@ -65,13 +73,27 @@ body {
 }
 
 .attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
   position: absolute;
   bottom: 0;
   right: 50%;
-  font-size: 0.75rem;
   transform: translateX(50%);
+  font-size: 0.75rem;
+}
+.attribution__profile {
+  margin-left: 3px;
+}
+@media only screen and (min-width: 23.44em) {
+  .attribution span {
+    display: table;
+  }
 }
 .attribution a {
+  display: inline-block;
+  margin-left: 1px;
   color: hsl(228deg, 45%, 44%);
 }
 
