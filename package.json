@@ -4,7 +4,7 @@
   "description": "Completed challenges from FrontEnd Mentor's challenges",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch ./qr-code/scss/main.scss ./qr-code/css/style.css"
+    "watch:sass": "sass --watch ./profile-card/sass/main.scss ./profile-card/css/style.css"
   },
   "repository": {
     "type": "git",

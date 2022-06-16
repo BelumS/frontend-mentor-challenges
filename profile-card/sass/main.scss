@@ -1,0 +1,131 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700;&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.box(100%);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: var.$font-size-lg;
+    background-color: var.$color-dark-cyan;
+    background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+    background-position: top -40vh left 170%, bottom -40vh right 170%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    overflow: hidden;
+
+    @include mix.respond(desktop) {
+        background-position: top -120vh left -80vw, bottom -120vh right -80vw;
+    }
+}
+
+.container {
+    width: var.$full-dim;
+    min-height: var.$full-vh;
+    position: relative;
+    @include mix.flexCenter;
+}
+
+.card {
+    width: 320px;
+    border: 1px solid var.$color-gray-dark-1;
+    border-radius: 15px;
+    background-color: var.$color-white;
+    overflow: hidden;
+
+    &__top {
+        height: 320px;
+
+        &--upper {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            min-height: calc(350px / 2);
+            background-image: url('../images/bg-pattern-card.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &--lower {
+            @include mix.flexCenterColumn;
+            position: relative;
+            top: -65px;
+        }
+    }
+
+    &__img {
+        @include mix.box(120px);
+        object-fit: cover;
+        border: 6px solid var.$color-white;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        margin-top: 5px;
+    }
+
+    &__age {
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 10px;
+        color: var.$color-gray-dark-2;
+        letter-spacing: 1px;
+    }
+
+    &__location {
+        font-size: 16px;
+        color: var.$color-gray-dark-2;
+        margin-top: 10px;
+    }
+
+    &__major-detail {
+        font-size: var.$font-size-lg;
+        font-weight: 700;
+    }
+
+    &__bottom {
+        border-top: 1px solid #ddd;
+    }
+
+    &__stats {
+        margin: 0 auto;
+        @include mix.flexCenter;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding: 30px;
+    }
+
+    &__stat {
+        @include mix.flexCenterColumn;
+        padding: 0 20px;
+
+        &--label {
+            margin-top: 10px;
+            font-size: var.$font-size-xs;
+            color: var.$color-gray-dark-2;
+            letter-spacing: 2.5px;
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    @include mix.absCenterBottom;
+
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
+}
