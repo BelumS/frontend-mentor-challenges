@@ -1,0 +1,32 @@
+//DIMENSIONS
+$full-dim: 100%;
+$full-vw: 100vw;
+$full-vh: 100vh;
+
+//COLORS
+$color-white: #FFF;
+$color-black: #000;
+
+$color-dark-cyan: hsl(185, 75%, 39%);
+$color-dark-blue: hsl(229, 23%, 23%);
+$color-dark-gray-blue: hsl(227, 10%, 46%);
+$color-dark-gray: #969696;
+
+$color-gray-dark-1: #6f717d;
+$color-gray-dark-2: #7a797f;
+$color-gray-dark-3: #84838b;
+$color-gray-dark-4: #2e2f42;
+
+//FONTS
+$font-size-xxs: 0.625rem; //10px
+$font-size-xs: 0.75rem; //12px
+$font-size-sm: 0.875rem; //14px
+$font-size-md: 1rem; //16px
+$font-size-lg: 1.125rem; //18px
+$font-size-xl: 1.25rem; //20px
+$font-size-xxl: 1.5rem; //24px
+$font-size-3xl: 2.652rem;  //42px
+$font-size-4xl: 4rem; //64px
+
+$bp-mobile: 23.44em; //375px / 16px = 23.44em
+$bp-desktop: 90em; //1440px / 16px = 90em

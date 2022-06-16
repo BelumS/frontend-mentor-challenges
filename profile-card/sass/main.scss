@@ -1,0 +1,106 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700;&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: var.$font-size-lg;
+    background-color: var.$color-dark-cyan;
+    // TODO: BGIMG is last, looks like it'll need linear gradient and %'s
+    // background-image: url("../images/bg-pattern-top.svg");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+}
+
+.container {
+    width: var.$full-dim;
+    min-height: var.$full-vh;
+    position: relative;
+    @include mix.flexCenter;
+}
+
+.card {
+    width: 90vw;
+    height: max-content;
+    border: 1px solid var.$color-gray-dark-1;
+    border-radius: 15px;
+    background-color: var.$color-white;
+    overflow: hidden;
+
+    &__top {
+        height: 300px;
+
+        &--upper {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            min-height: 150px;
+            background-image: url('../images/bg-pattern-card.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &--lower {
+            @include mix.flexCenterColumn;
+            position: relative;
+            top: -50px;
+        }
+    }
+
+    &__img {
+        border: 6px solid var.$color-white;
+        border-radius: 50%;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        padding: 2px 15px;
+        margin-top: 10px;
+    }
+
+    &__age {
+        font-size: 20px;
+        font-weight: 400;
+        margin-left: 10px;
+        color: var.$color-gray-dark-2;
+        letter-spacing: 1px;
+    }
+
+    &__location {
+        font-size: 14px;
+        color: var.$color-gray-dark-2;
+        margin-top: 5px;
+    }
+
+    &__major-detail {
+        font-size: var.$font-size-lg;
+        font-weight: 700;
+    }
+
+    &__bottom {
+        border-top: 1px solid var.$color-dark-gray;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    @include mix.absCenterBottom;
+
+    & a {
+        color: hsl(228, 45%, 44%);
+    }
+}
