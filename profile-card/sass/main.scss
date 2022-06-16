@@ -42,12 +42,12 @@ body {
     overflow: hidden;
 
     &__top {
-        height: 300px;
+        height: 320px;
 
         &--upper {
             border-top-left-radius: 12px;
             border-top-right-radius: 12px;
-            min-height: 150px;
+            min-height: calc(350px / 2);
             background-image: url('../images/bg-pattern-card.svg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -56,19 +56,20 @@ body {
         &--lower {
             @include mix.flexCenterColumn;
             position: relative;
-            top: -50px;
+            top: -75px;
         }
     }
 
     &__img {
+        @include mix.box(150px);
+        object-fit: cover;
         border: 6px solid var.$color-white;
         border-radius: 50%;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     &__title {
-        padding: 2px 15px;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     &__age {
@@ -80,9 +81,9 @@ body {
     }
 
     &__location {
-        font-size: 14px;
+        font-size: 16px;
         color: var.$color-gray-dark-2;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     &__major-detail {
@@ -91,7 +92,27 @@ body {
     }
 
     &__bottom {
-        border-top: 1px solid var.$color-dark-gray;
+        border-top: 1px solid #ddd;
+        margin-top: 25px;
+    }
+
+    &__stats {
+        margin: 0 auto;
+        @include mix.flexCenter;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding: 40px;
+    }
+
+    &__stat {
+        @include mix.flexCenterColumn;
+
+        &--label {
+            margin-top: 10px;
+            font-size: var.$font-size-xs;
+            color: var.$color-gray-dark-2;
+            letter-spacing: 2.5px;
+        }
     }
 }
 

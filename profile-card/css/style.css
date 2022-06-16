@@ -35,12 +35,12 @@ body {
   overflow: hidden;
 }
 .card__top {
-  height: 300px;
+  height: 320px;
 }
 .card__top--upper {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  min-height: 150px;
+  min-height: 175px;
   background-image: url("../images/bg-pattern-card.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,16 +51,18 @@ body {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  top: -50px;
+  top: -75px;
 }
 .card__img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   border: 6px solid #FFF;
   border-radius: 50%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .card__title {
-  padding: 2px 15px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .card__age {
   font-size: 20px;
@@ -70,16 +72,38 @@ body {
   letter-spacing: 1px;
 }
 .card__location {
-  font-size: 14px;
+  font-size: 16px;
   color: #7a797f;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .card__major-detail {
   font-size: 1.125rem;
   font-weight: 700;
 }
 .card__bottom {
-  border-top: 1px solid #969696;
+  border-top: 1px solid #ddd;
+  margin-top: 25px;
+}
+.card__stats {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 40px;
+}
+.card__stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card__stat--label {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #7a797f;
+  letter-spacing: 2.5px;
 }
 
 .attribution {
