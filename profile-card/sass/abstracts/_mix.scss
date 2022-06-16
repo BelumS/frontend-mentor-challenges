@@ -31,4 +31,7 @@
     @if ($bp == desktop) {
         @media only screen and(min-width: var.$bp-desktop) { @content; }
     }
+    @if ($bp == mobile) {
+        @media only screen and(min-width: var.$bp-mobile) { @content; }
+    }
 }
