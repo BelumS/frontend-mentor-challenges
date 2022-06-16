@@ -19,11 +19,10 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: var.$font-size-lg;
     background-color: var.$color-dark-cyan;
-    // TODO: BGIMG is last, looks like it'll need linear gradient and %'s
-    // background-image: url("../images/bg-pattern-top.svg");
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+    background-position: top -40vh left 170%, bottom -40vh right 170%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
 }
 
 .container {
@@ -35,7 +34,6 @@ body {
 
 .card {
     width: 90vw;
-    height: max-content;
     border: 1px solid var.$color-gray-dark-1;
     border-radius: 15px;
     background-color: var.$color-white;
@@ -56,12 +54,12 @@ body {
         &--lower {
             @include mix.flexCenterColumn;
             position: relative;
-            top: -75px;
+            top: -65px;
         }
     }
 
     &__img {
-        @include mix.box(150px);
+        @include mix.box(120px);
         object-fit: cover;
         border: 6px solid var.$color-white;
         border-radius: 50%;
@@ -93,7 +91,6 @@ body {
 
     &__bottom {
         border-top: 1px solid #ddd;
-        margin-top: 25px;
     }
 
     &__stats {
@@ -101,11 +98,12 @@ body {
         @include mix.flexCenter;
         flex-flow: row nowrap;
         justify-content: space-around;
-        padding: 40px;
+        padding: 30px;
     }
 
     &__stat {
         @include mix.flexCenterColumn;
+        padding: 0 20px;
 
         &--label {
             margin-top: 10px;

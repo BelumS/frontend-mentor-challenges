@@ -15,6 +15,10 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1.125rem;
   background-color: hsl(185deg, 75%, 39%);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-position: top -40vh left 170%, bottom -40vh right 170%;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
 }
 
 .container {
@@ -28,7 +32,6 @@ body {
 
 .card {
   width: 90vw;
-  height: max-content;
   border: 1px solid #6f717d;
   border-radius: 15px;
   background-color: #FFF;
@@ -51,11 +54,11 @@ body {
   justify-content: center;
   flex-direction: column;
   position: relative;
-  top: -75px;
+  top: -65px;
 }
 .card__img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border: 6px solid #FFF;
   border-radius: 50%;
@@ -82,7 +85,6 @@ body {
 }
 .card__bottom {
   border-top: 1px solid #ddd;
-  margin-top: 25px;
 }
 .card__stats {
   margin: 0 auto;
@@ -91,13 +93,14 @@ body {
   justify-content: center;
   flex-flow: row nowrap;
   justify-content: space-around;
-  padding: 40px;
+  padding: 30px;
 }
 .card__stat {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 20px;
 }
 .card__stat--label {
   margin-top: 10px;
