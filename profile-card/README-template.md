@@ -26,7 +26,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - Build out the project to the designs provided
 
 ### Screenshot
-![](./screenshot.jpg)
+![Screenshot](./images/component-ss.png)
 
 ### Links
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
