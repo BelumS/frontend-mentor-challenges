@@ -29,8 +29,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 ![Screenshot](./images/component-ss.png)
 
 ### Links
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/BelumS/frontend-mentor-challenges/tree/main/profile-card)
+- Live Site URL: [Netlify](https://capable-sundae-d8b808.netlify.app/)
 
 ## My process
 
