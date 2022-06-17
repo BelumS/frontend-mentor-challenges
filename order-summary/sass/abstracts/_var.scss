@@ -1,0 +1,29 @@
+//DIMENSIONS
+$full: 100%;
+$full-vw: 100vw;
+$full-vh: 100vh;
+
+//COLORS
+$color-white: #FFF;
+$color-black: #000;
+$color-silver: hsl(226,20,65);
+
+$color-blue-pale-1: hsl(225, 100%, 94%);
+$color-blue-pale-2: hsl(225, 100%, 98%);
+$color-blue-bright: hsl(245, 75%, 52%);
+$color-blue-desat: hsl(224, 23%, 55%);
+$color-blue-dark: hsl(223, 47%, 23%);
+
+//FONTS
+$font-size-xxs: 0.625rem; //10px
+$font-size-xs: 0.75rem; //12px
+$font-size-sm: 0.875rem; //14px
+$font-size-md: 1rem; //16px
+$font-size-lg: 1.125rem; //18px
+$font-size-xl: 1.25rem; //20px
+$font-size-xxl: 1.5rem; //24px
+$font-size-3xl: 2.652rem;  //42px
+$font-size-4xl: 4rem; //64px
+
+$bp-mobile: 23.44em; //(375px / 16px) = 23.44em
+$bp-desktop: 90em; //(1440px / 16px) = 90em

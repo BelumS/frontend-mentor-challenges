@@ -1,0 +1,134 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900;&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.fullBox;
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.container {
+    @include mix.respBoxY;
+    @include mix.flexCenter;
+}
+
+.card {
+    width: 90%;
+    border: none;
+    border-radius: 40px;
+    overflow: hidden;
+    @include mix.flexCenterColumn;
+    background-color: var.$color-white;
+
+    &__img {
+        width: var.$full;
+        object-fit: cover;
+    }
+
+    &__lower {
+        height: max-content;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+
+        & > * {
+            margin: 10px 0;
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    &__text {
+        font-size: var.$font-size-md;
+        font-weight: 500;
+        color: var.$color-silver;
+        width: 270px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    &__plan {
+        @include mix.flexCenter;
+        justify-content: space-evenly;
+        width: var.$full;
+        border: none;
+        border-radius: 10px;
+        background-color: var.$color-blue-pale-2;
+        padding: 10px 0;
+
+        &-pricing-price {
+            font-size: 14px;
+            color: var.$color-silver;
+        }
+
+        &-change {
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: underline;
+            color: var.$color-blue-bright;
+
+            &:active {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__actions {
+        @include mix.flexCenterColumn;
+    }
+}
+
+.btn {
+    width: var.$full;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 10px;
+    transition: all .2s;
+    cursor: pointer;
+
+    &--proceed {
+        background-color: var.$color-blue-bright;
+        color: var.$color-white;
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &--cancel {
+        background-color: transparent;
+        color: hsl(232,12,73);
+
+        &:active {
+            color: var.$color-black;
+        }
+    }
+}
