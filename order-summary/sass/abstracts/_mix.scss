@@ -1,0 +1,73 @@
+@use "../abstracts/var";
+
+@mixin box($val) {
+    width: $val;
+    height: $val;
+};
+
+@mixin fullBox {
+    @include box(var.$full);
+}
+
+@mixin respBox {
+    min-width: var.$full-vw;
+    min-height: var.$full-vh;
+}
+
+@mixin respBoxX {
+    width: var.$full-vw;
+    min-height: var.$full;
+}
+
+@mixin respBoxY {
+    width: var.$full;
+    min-height: var.$full-vh;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexCenterColumn {
+    @include flexCenter;
+    flex-direction: column;
+}
+
+@mixin boxShadowBlack($x, $y, $al) {
+    box-shadow: 0 $x $y rgba(#000, $al);
+}
+
+@mixin absCenterBottom {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+@mixin respond($bp) {
+    @if ($bp == port-mobile) {
+        @media only screen and (min-width: var.$bp-port-mobile) { @content; }
+    }
+
+    @if ($bp == land-mobile) {
+        @media only screen and (min-width: var.$bp-land-mobile) { @content; }
+    }
+
+    @if ($bp == tablet) {
+        @media only screen and (min-width: var.$bp-tablet) { @content; }
+    }
+
+    @if ($bp == laptop) {
+        @media only screen and (min-width: var.$bp-laptop) { @content; }
+    }
+
+    @if ($bp == desktop) {
+        @media only screen and (min-width: var.$bp-desktop) { @content; }
+    }
+
+    @if ($bp == lg-desktop) {
+        @media only screen and (min-width: var.$bp-lg-desktop) { @content; }
+    }
+}
