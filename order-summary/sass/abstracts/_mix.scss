@@ -47,10 +47,27 @@
 }
 
 @mixin respond($bp) {
-    @if ($bp == desktop) {
-        @media only screen and(min-width: var.$bp-desktop) { @content; }
+    @if ($bp == port-mobile) {
+        @media only screen and (min-width: var.$bp-port-mobile) { @content; }
     }
-    @if ($bp == mobile) {
-        @media only screen and(min-width: var.$bp-mobile) { @content; }
+
+    @if ($bp == land-mobile) {
+        @media only screen and (min-width: var.$bp-land-mobile) { @content; }
+    }
+
+    @if ($bp == tablet) {
+        @media only screen and (min-width: var.$bp-tablet) { @content; }
+    }
+
+    @if ($bp == laptop) {
+        @media only screen and (min-width: var.$bp-laptop) { @content; }
+    }
+
+    @if ($bp == desktop) {
+        @media only screen and (min-width: var.$bp-desktop) { @content; }
+    }
+
+    @if ($bp == lg-desktop) {
+        @media only screen and (min-width: var.$bp-lg-desktop) { @content; }
     }
 }

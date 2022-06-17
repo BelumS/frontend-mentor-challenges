@@ -16,9 +16,22 @@ body {
   height: 100%;
   font-family: "Red Hat Display", sans-serif;
   background-image: url(../images/pattern-background-mobile.svg);
+  background-color: hsl(225deg, 100%, 94%);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+  transition: all 0.2s;
+}
+@media only screen and (min-width: 48em) {
+  body {
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+}
+@media only screen and (min-width: 75em) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-position: top -40vh left 40%;
+  }
 }
 
 .container {
@@ -39,6 +52,12 @@ body {
   justify-content: center;
   flex-direction: column;
   background-color: #FFF;
+  transition: width 0.2s;
+}
+@media only screen and (min-width: 31.25em) {
+  .card {
+    width: max-content;
+  }
 }
 .card__img {
   width: 100%;
@@ -49,12 +68,27 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
+  position: relative;
 }
 .card__lower > * {
   margin: 10px 0;
+  width: 300px;
+  transition: width 0.2s;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__lower > * {
+    width: 350px;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .card__lower > * {
+    width: 370px;
+  }
 }
 .card__lower > *:nth-child(2) {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card__title {
   text-align: center;

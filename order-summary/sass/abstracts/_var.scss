@@ -8,6 +8,7 @@ $color-white: #FFF;
 $color-black: #000;
 $color-silver: hsl(226,20,65);
 
+//PALETTE
 $color-blue-pale-1: hsl(225, 100%, 94%);
 $color-blue-pale-2: hsl(225, 100%, 98%);
 $color-blue-bright: hsl(245, 75%, 52%);
@@ -25,5 +26,10 @@ $font-size-xxl: 1.5rem; //24px
 $font-size-3xl: 2.652rem;  //42px
 $font-size-4xl: 4rem; //64px
 
-$bp-mobile: 23.44em; //(375px / 16px) = 23.44em
-$bp-desktop: 90em; //(1440px / 16px) = 90em
+//BREAKPOINTS
+$bp-port-mobile: 23.44em; //(375px / 16px) = 23.44em
+$bp-land-mobile: 31.25em; //(500px / 16px) = 31.25em
+$bp-tablet: 48em; //(768px / 16px) = 48em
+$bp-laptop: 62em; //(992px / 16px) = 62em
+$bp-desktop: 75em; //(1200px / 16px) = 75em
+$bp-lg-desktop: 90em; //(1440px / 16px) = 90em
