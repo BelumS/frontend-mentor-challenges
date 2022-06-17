@@ -102,6 +102,11 @@ body {
   text-align: center;
   line-height: 1.5;
 }
+@media only screen and (min-width: 31.25em) {
+  .card__text {
+    width: 320px;
+  }
+}
 .card__plan {
   display: flex;
   align-items: center;

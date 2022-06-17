@@ -96,6 +96,10 @@ body {
         width: 270px;
         text-align: center;
         line-height: 1.5;
+
+        @include mix.respond(land-mobile) {
+            width: 320px;
+        } 
     }
 
     &__plan {
