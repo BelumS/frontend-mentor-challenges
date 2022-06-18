@@ -30,14 +30,15 @@ body {
 
 .card {
   background-color: hsl(216deg, 50%, 16%);
-  width: 85vw;
-  height: 73vh;
+  width: 320px;
+  height: 570px;
   border: none;
   border-radius: 10px;
 }
 @media only screen and (min-width: 31.25em) {
   .card {
-    width: 450px;
+    width: 350px;
+    height: 630px;
   }
 }
 .card__top {
@@ -50,6 +51,12 @@ body {
   height: 270px;
   object-fit: cover;
   border-radius: 10px;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__top-img {
+    width: 300px;
+    height: 300px;
+  }
 }
 .card__bottom {
   display: flex;
@@ -85,6 +92,11 @@ body {
   justify-content: center;
   justify-content: space-between;
   column-gap: 80px;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__details {
+    column-gap: 70px;
+  }
 }
 .card__details-eth-icon {
   position: relative;
@@ -135,7 +147,7 @@ body {
 @media only screen and (min-width: 31.25em) {
   .card__user {
     width: 95%;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 }
 .card__user-name {
@@ -144,6 +156,11 @@ body {
   position: relative;
   top: 10px;
   right: 10px;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__user-name {
+    right: 5px;
+  }
 }
 .card__user-name span {
   color: hsl(0deg, 0%, 100%);
