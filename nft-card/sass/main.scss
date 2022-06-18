@@ -1,0 +1,133 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.fullBox;
+    font-family: 'Outfit', sans-serif;
+    background-color: var.$theme-main-bg;
+    transition: all .2s; 
+    padding: 70px 0;  
+}
+
+.container {
+    @include mix.respBoxY;
+    @include mix.flexCenter;
+}
+
+.card {
+    background-color: var.$theme-card-bg;
+    width: 85%;
+    height: 570px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__top {
+        width: var.$full;
+        padding: 20px;
+        padding-bottom: 10px;
+
+        &-img {
+            width: inherit;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
+    &__bottom {
+        @include mix.flexCenterColumn;
+        align-items: flex-start;
+        padding: 0 0 20px 20px; //TRBL
+
+        & > * {
+            margin: 7px;
+        }
+    }
+
+    &__title {
+        color: var.$color-white;
+        font-weight: 700;
+    }
+
+    &__description {
+        align-self: stretch;
+        color: var.$theme-primary;
+        font-size: var.$font-size-lg;
+        font-weight: 100;
+        line-height: 1.7;
+    }
+
+    &__details {
+        @include mix.flexCenter;
+        justify-content: space-between;
+        column-gap: 80px;
+
+        &-eth {
+
+            &-icon {
+                position: relative;  
+                top: 3px;
+            }
+
+            &-amount {
+                color: var.$theme-secondary;
+            }
+        }
+        
+        &-timer {
+
+            &-icon {
+                position: relative;  
+                top: 3px;
+            }
+
+            &-time {
+                color: var.$theme-primary;
+            }
+        }
+    }
+
+    &__user {
+        border-top: .1px solid var.$theme-primary;
+        width: 90%;
+        margin: 20px auto;
+        align-self: flex-end;
+        @include mix.flexCenter;
+        font-size: 1.1rem;
+
+        &-name {
+            color: var.$theme-primary;
+            margin: 20px auto;
+            position: relative;
+            top: 10px;
+
+            & span {
+                color: var.$color-white;
+            }
+        }
+
+        &-img {
+            @include mix.box(15%);
+            object-fit: cover;
+            border: 2px solid var.$color-white;
+            border-radius: 50%;
+            position: relative;
+            top: 20px;
+            right: 0;
+        }
+    }
+}

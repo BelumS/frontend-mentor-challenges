@@ -4,7 +4,7 @@
   "description": "Completed challenges from FrontEnd Mentor's challenges",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch ./order-summary/sass/main.scss ./order-summary/css/style.css"
+    "watch:sass": "sass --watch ./nft-card/sass/main.scss ./nft-card/css/style.css"
   },
   "repository": {
     "type": "git",
