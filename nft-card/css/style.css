@@ -44,6 +44,7 @@ body {
 .card__top {
   width: 100%;
   padding: 25px;
+  position: relative;
   overflow: hidden;
 }
 .card__top-img {
@@ -51,12 +52,50 @@ body {
   height: 270px;
   object-fit: cover;
   border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
 }
 @media only screen and (min-width: 31.25em) {
   .card__top-img {
     width: 300px;
     height: 300px;
   }
+}
+.card__top:active .card__top-img {
+  opacity: 0.9;
+}
+.card__top:active .card__top-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.card__top-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  height: 270px;
+  border-radius: 10px;
+  padding: 25px;
+  background-color: rgba(0, 255, 247, 0.7);
+  cursor: pointer;
+  transition: all 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__top-overlay {
+    width: 300px;
+    height: 300px;
+  }
+}
+.card__top-overlay-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .card__bottom {
   display: flex;
@@ -74,6 +113,10 @@ body {
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 1.1px;
+  cursor: pointer;
+}
+.card__title:active {
+  color: hsl(178deg, 100%, 50%);
 }
 .card__description {
   color: hsl(215deg, 51%, 70%);
@@ -90,7 +133,6 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
-  justify-content: space-between;
   column-gap: 80px;
 }
 @media only screen and (min-width: 31.25em) {
@@ -164,6 +206,10 @@ body {
 }
 .card__user-name span {
   color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+.card__user-name span:active {
+  color: hsl(178deg, 100%, 50%);
 }
 .card__user-img {
   width: 14%;

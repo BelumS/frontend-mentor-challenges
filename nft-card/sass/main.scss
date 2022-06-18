@@ -43,15 +43,47 @@ body {
     &__top {
         width: var.$full;
         padding: 25px;
+        position: relative;
         overflow: hidden;
 
         &-img {
             @include mix.box(270px);
             object-fit: cover;
             border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: all .2s;
+            overflow: hidden;
 
             @include mix.respond(land-mobile) {
                 @include mix.box(300px);
+            }
+        }
+
+        &:active &-img {
+            opacity: 0.9;
+        }
+
+        &:active &-overlay {
+            @include mix.show;
+        }
+
+        &-overlay {
+            @include mix.absCenter;
+            @include mix.box(270px);
+            border-radius: 10px;
+            padding: 25px;
+            background-color: rgba(var.$theme-secondary, 0.7);
+            cursor: pointer;
+            @include mix.defaultTransition;
+            @include mix.hide;
+
+            @include mix.respond(land-mobile) {
+                @include mix.box(300px);
+            }
+
+            &-img {
+                @include mix.absCenter;
             }
         }
     }
@@ -71,6 +103,11 @@ body {
         font-weight: 700;
         font-size: 1.3rem;
         letter-spacing: 1.1px;
+        cursor: pointer;
+
+        &:active {
+            color: var.$theme-secondary;
+        }
     }
 
     &__description {
@@ -86,7 +123,6 @@ body {
 
     &__details {
         @include mix.flexCenter;
-        justify-content: space-between;
         column-gap: 80px;
 
         @include mix.respond(land-mobile) {
@@ -158,6 +194,11 @@ body {
 
             & span {
                 color: var.$color-white;
+                cursor: pointer;
+
+                &:active {
+                    color: var.$theme-secondary;
+                }
             }
         }
 
