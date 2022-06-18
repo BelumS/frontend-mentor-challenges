@@ -20,7 +20,7 @@ body {
     font-family: 'Outfit', sans-serif;
     background-color: var.$theme-main-bg;
     transition: all .2s; 
-    padding: 70px 0;  
+    padding: 50px 0;  
 }
 
 .container {
@@ -30,19 +30,22 @@ body {
 
 .card {
     background-color: var.$theme-card-bg;
-    width: 85%;
-    height: 570px;
+    width: 85vw;
+    height: 73vh;
     border: none;
     border-radius: 10px;
-    overflow: hidden;
+
+    @include mix.respond(land-mobile) {
+        width: 450px;
+    }
 
     &__top {
         width: var.$full;
-        padding: 20px;
-        padding-bottom: 10px;
+        padding: 25px;
+        overflow: hidden;
 
         &-img {
-            width: inherit;
+            @include mix.box(270px);
             object-fit: cover;
             border-radius: 10px;
         }
@@ -51,24 +54,29 @@ body {
     &__bottom {
         @include mix.flexCenterColumn;
         align-items: flex-start;
-        padding: 0 0 20px 20px; //TRBL
+        padding: 0 10px 0 30px; //TRBL
 
         & > * {
-            margin: 7px;
+            margin: 7px 0;
         }
     }
 
     &__title {
         color: var.$color-white;
         font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: 1.1px;
     }
 
     &__description {
-        align-self: stretch;
         color: var.$theme-primary;
-        font-size: var.$font-size-lg;
+        font-size: .9rem;
         font-weight: 100;
         line-height: 1.7;
+
+        @include mix.respond(land-mobile) {
+            font-size: var.$font-size-lg;
+        }
     }
 
     &__details {
@@ -77,43 +85,63 @@ body {
         column-gap: 80px;
 
         &-eth {
-
             &-icon {
                 position: relative;  
                 top: 3px;
+                margin-right: 2px;
+
+                @include mix.respond(land-mobile) {
+                    @include mix.box(1.2rem);
+                }
             }
 
             &-amount {
                 color: var.$theme-secondary;
+                font-weight: 600;
+
+                @include mix.respond(land-mobile) {
+                    font-size: 1.2rem;
+                }
             }
         }
         
         &-timer {
-
             &-icon {
                 position: relative;  
                 top: 3px;
+                margin-right: 2px;
+
+                @include mix.respond(land-mobile) {
+                    @include mix.box(1.2rem);
+                }
             }
 
             &-time {
                 color: var.$theme-primary;
+
+                @include mix.respond(land-mobile) {
+                    font-size: 1.2rem;
+                }
             }
         }
     }
 
     &__user {
         border-top: .1px solid var.$theme-primary;
-        width: 90%;
         margin: 20px auto;
-        align-self: flex-end;
         @include mix.flexCenter;
-        font-size: 1.1rem;
+
+        @include mix.respond(land-mobile) {
+            width: 95%;
+            font-size: 1.25rem;
+        }
 
         &-name {
             color: var.$theme-primary;
             margin: 20px auto;
             position: relative;
             top: 10px;
+            right: 10px;
 
             & span {
                 color: var.$color-white;
@@ -121,7 +149,7 @@ body {
         }
 
         &-img {
-            @include mix.box(15%);
+            @include mix.box(14%);
             object-fit: cover;
             border: 2px solid var.$color-white;
             border-radius: 50%;

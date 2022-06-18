@@ -17,7 +17,7 @@ body {
   font-family: "Outfit", sans-serif;
   background-color: hsl(217deg, 54%, 11%);
   transition: all 0.2s;
-  padding: 70px 0;
+  padding: 50px 0;
 }
 
 .container {
@@ -30,19 +30,24 @@ body {
 
 .card {
   background-color: hsl(216deg, 50%, 16%);
-  width: 85%;
-  height: 570px;
+  width: 85vw;
+  height: 73vh;
   border: none;
   border-radius: 10px;
-  overflow: hidden;
+}
+@media only screen and (min-width: 31.25em) {
+  .card {
+    width: 450px;
+  }
 }
 .card__top {
   width: 100%;
-  padding: 20px;
-  padding-bottom: 10px;
+  padding: 25px;
+  overflow: hidden;
 }
 .card__top-img {
-  width: inherit;
+  width: 270px;
+  height: 270px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -52,21 +57,27 @@ body {
   justify-content: center;
   flex-flow: column nowrap;
   align-items: flex-start;
-  padding: 0 0 20px 20px;
+  padding: 0 10px 0 30px;
 }
 .card__bottom > * {
-  margin: 7px;
+  margin: 7px 0;
 }
 .card__title {
   color: hsl(0deg, 0%, 100%);
   font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1.1px;
 }
 .card__description {
-  align-self: stretch;
   color: hsl(215deg, 51%, 70%);
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   font-weight: 100;
   line-height: 1.7;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__description {
+    font-size: 1.125rem;
+  }
 }
 .card__details {
   display: flex;
@@ -78,39 +89,68 @@ body {
 .card__details-eth-icon {
   position: relative;
   top: 3px;
+  margin-right: 2px;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__details-eth-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
 .card__details-eth-amount {
   color: hsl(178deg, 100%, 50%);
+  font-weight: 600;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__details-eth-amount {
+    font-size: 1.2rem;
+  }
 }
 .card__details-timer-icon {
   position: relative;
   top: 3px;
+  margin-right: 2px;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__details-timer-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
 .card__details-timer-time {
   color: hsl(215deg, 51%, 70%);
 }
+@media only screen and (min-width: 31.25em) {
+  .card__details-timer-time {
+    font-size: 1.2rem;
+  }
+}
 .card__user {
   border-top: 0.1px solid hsl(215deg, 51%, 70%);
-  width: 90%;
   margin: 20px auto;
-  align-self: flex-end;
   display: flex;
   align-content: center;
   justify-content: center;
-  font-size: 1.1rem;
+}
+@media only screen and (min-width: 31.25em) {
+  .card__user {
+    width: 95%;
+    font-size: 1.25rem;
+  }
 }
 .card__user-name {
   color: hsl(215deg, 51%, 70%);
   margin: 20px auto;
   position: relative;
   top: 10px;
+  right: 10px;
 }
 .card__user-name span {
   color: hsl(0deg, 0%, 100%);
 }
 .card__user-img {
-  width: 15%;
-  height: 15%;
+  width: 14%;
+  height: 14%;
   object-fit: cover;
   border: 2px solid hsl(0deg, 0%, 100%);
   border-radius: 50%;
