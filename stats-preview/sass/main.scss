@@ -1,0 +1,113 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.fullBox;
+    font-family: 'Inter', sans-serif;
+    // font-family: 'Lexend-Deca', sans-serif;
+    background-color: var.$theme-main-bg;
+    @include mix.defaultTransition; 
+}
+
+.container {
+    @include mix.respBoxY;
+    @include mix.flexCenter;
+}
+
+.card {
+    @include mix.flexCenterColumn;
+    width: 300px;
+    height: 530px;
+    background-color: var.$theme-card-bg;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__top {
+        @include mix.box(var.$full);
+        position: relative;
+        top: 0;
+    }
+
+    &__overlay {
+        background-color: var.$color-violet-accent;
+        opacity: 0.6;
+        @include mix.absCenter;
+        width: inherit;
+        height: var.$full;   
+    }
+
+    &__image {
+        width: inherit;
+        height: var.$full; 
+        opacity: 0.9;
+        background-image: url(../images/image-header-mobile.jpg);
+        background-size: cover;
+        @include mix.absCenter;
+
+        @include mix.respond(tablet) {
+            background-image: url(../images/image-header-desktop.jpg);
+        }
+    }
+
+    &__content {
+        @include mix.flexCenterColumn;
+        text-align: center;
+        padding: 10px 30px 0 30px;
+        margin-top: 10px;
+
+        & > * {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__title {
+        color: var.$color-white;
+        font-size: 22px;
+        line-height: 1.3;
+
+        & span {
+            color: var.$color-violet-accent;
+        }
+    }
+
+    &__text {
+        color: var.$theme-white-heading;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 25px;
+    }
+
+    &__stat {
+        @include mix.flexCenterColumn;
+        margin-bottom: 10px;
+
+        &-number {
+            color: var.$color-white;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 19px;
+        }
+
+        &-label {
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var.$theme-white-heading;
+        }
+    }
+}
