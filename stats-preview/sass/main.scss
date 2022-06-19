@@ -36,31 +36,54 @@ body {
     border: none;
     border-radius: 10px;
     overflow: hidden;
+    transition: all .8s;
+
+    @include mix.respond(laptop) {
+        width: 850px;
+        height: 330px;
+        @include mix.flexCenter;
+        flex-flow: row-reverse nowrap;
+    }
 
     &__top {
         @include mix.box(var.$full);
         position: relative;
         top: 0;
+
+        @include mix.respond(laptop) {
+            justify-self: flex-start;
+        }
     }
 
     &__overlay {
-        background-color: var.$color-violet-accent;
+        background-color: hsl(277, 74%, 62%);
         opacity: 0.6;
         @include mix.absCenter;
         width: inherit;
-        height: var.$full;   
+        height: var.$full;
+        filter: brightness(80%);
+
+        @include mix.respond(laptop) {
+            width: 130%;
+         }
     }
 
     &__image {
         width: inherit;
         height: var.$full; 
-        opacity: 0.9;
+        // opacity: 0.9;
         background-image: url(../images/image-header-mobile.jpg);
         background-size: cover;
+        background-repeat: no-repeat;
         @include mix.absCenter;
 
         @include mix.respond(tablet) {
             background-image: url(../images/image-header-desktop.jpg);
+            filter: brightness(70%);
+        }
+
+        @include mix.respond(laptop) {
+           width: 130%;
         }
     }
 
@@ -69,6 +92,13 @@ body {
         text-align: center;
         padding: 10px 30px 0 30px;
         margin-top: 10px;
+
+        @include mix.respond(laptop) {
+            padding: 40px 100px 40px 70px;
+            margin: 0;
+            text-align: left;
+            justify-self: flex-end;
+        }
 
         & > * {
             margin-bottom: 15px;
@@ -92,9 +122,25 @@ body {
         margin-bottom: 25px;
     }
 
+    &__stats {
+        @include mix.respond(laptop) { 
+            align-self: flex-start;
+            @include mix.flexCenterRow;
+            column-gap: 50px;
+        }
+    }
+
     &__stat {
         @include mix.flexCenterColumn;
         margin-bottom: 10px;
+
+        @include mix.respond(laptop) {
+            align-items: flex-start;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
 
         &-number {
             color: var.$color-white;

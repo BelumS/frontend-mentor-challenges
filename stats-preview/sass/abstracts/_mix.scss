@@ -32,13 +32,17 @@
     justify-content: center;
 }
 
+@mixin flexCenterRow {
+    @include flexCenter;
+    flex-flow: row nowrap;
+}
+
 @mixin flexCenterColumn {
     @include flexCenter;
     flex-flow: column nowrap;
 }
 
 // POSITIONING
-
 @mixin absTopLeft($t, $l) {
     position: absolute;
     top: $t;

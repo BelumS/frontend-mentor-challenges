@@ -38,6 +38,17 @@ body {
   border: none;
   border-radius: 10px;
   overflow: hidden;
+  transition: all 0.8s;
+}
+@media only screen and (min-width: 62em) {
+  .card {
+    width: 850px;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row-reverse nowrap;
+  }
 }
 .card__top {
   width: 100%;
@@ -45,8 +56,13 @@ body {
   position: relative;
   top: 0;
 }
+@media only screen and (min-width: 62em) {
+  .card__top {
+    justify-self: flex-start;
+  }
+}
 .card__overlay {
-  background-color: hsl(277deg, 64%, 61%);
+  background-color: hsl(277deg, 74%, 62%);
   opacity: 0.6;
   position: absolute;
   top: 50%;
@@ -54,13 +70,19 @@ body {
   transform: translate(-50%, -50%);
   width: inherit;
   height: 100%;
+  filter: brightness(80%);
+}
+@media only screen and (min-width: 62em) {
+  .card__overlay {
+    width: 130%;
+  }
 }
 .card__image {
   width: inherit;
   height: 100%;
-  opacity: 0.9;
   background-image: url(../images/image-header-mobile.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -69,6 +91,12 @@ body {
 @media only screen and (min-width: 48em) {
   .card__image {
     background-image: url(../images/image-header-desktop.jpg);
+    filter: brightness(70%);
+  }
+}
+@media only screen and (min-width: 62em) {
+  .card__image {
+    width: 130%;
   }
 }
 .card__content {
@@ -79,6 +107,14 @@ body {
   text-align: center;
   padding: 10px 30px 0 30px;
   margin-top: 10px;
+}
+@media only screen and (min-width: 62em) {
+  .card__content {
+    padding: 40px 100px 40px 70px;
+    margin: 0;
+    text-align: left;
+    justify-self: flex-end;
+  }
 }
 .card__content > * {
   margin-bottom: 15px;
@@ -97,12 +133,30 @@ body {
   line-height: 1.4;
   margin-bottom: 25px;
 }
+@media only screen and (min-width: 62em) {
+  .card__stats {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    column-gap: 50px;
+  }
+}
 .card__stat {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
   margin-bottom: 10px;
+}
+@media only screen and (min-width: 62em) {
+  .card__stat {
+    align-items: flex-start;
+  }
+  .card__stat:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 .card__stat-number {
   color: hsl(0deg, 0%, 100%);
