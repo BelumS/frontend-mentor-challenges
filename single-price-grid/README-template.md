@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/BelumS/frontend-mentor-challenges/tree/main/single-price-grid)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://deft-nougat-3caf96.netlify.app)
 
 ## My process
 
