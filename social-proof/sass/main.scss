@@ -1,0 +1,88 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.fullBox;
+    font-family: 'League Spartan', sans-serif;
+    font-size: var.$font-size-default;
+    background-color: #eee;
+    @include mix.defaultTransition;
+    padding: 20px;
+    position: relative;
+}
+
+.container {
+    @include mix.respBoxY;
+    @include mix.flexCenter;
+}
+
+.proof {
+
+    &__content {
+        &-heading {
+
+        }
+    
+        &-text {
+    
+        }
+    }
+
+    &__ratings {
+
+    }
+
+    &__rating {
+        &-stars {
+
+        }
+
+        &-text {
+
+        }
+    }
+
+    &__customers {
+
+    }
+
+    &__customer {
+        &-top {
+
+        }
+
+        &-img {
+
+        }
+
+        &-name {
+
+        }
+
+        &-label {
+
+        }
+
+        &-bottom {
+
+        }
+
+        &-text {
+            
+        }
+    }
+}
