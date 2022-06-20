@@ -4,7 +4,7 @@
   "description": "Completed challenges from FrontEnd Mentor's challenges",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch ./three-col-card/sass/main.scss ./three-col-card/css/style.css"
+    "watch:sass": "sass --watch ./single-price-grid/sass/main.scss ./single-price-grid/css/style.css"
   },
   "repository": {
     "type": "git",

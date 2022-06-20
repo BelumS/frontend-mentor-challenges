@@ -1,0 +1,35 @@
+//DIMENSIONS
+$full: 100%;
+$full-vw: 100vw;
+$full-vh: 100vh;
+
+//COLORS
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+
+//THEMES
+$theme-yellow-light:hsl(71, 73%, 54%);
+$theme-cyan-light: hsl(179, 47%, 51%);
+$theme-cyan-dark: hsl(179,61%,43);
+$theme-gray-light: hsl(204, 43%, 93%);
+$theme-gray-blue: hsl(218, 22%, 67%);
+
+//FONTS
+$font-size-xxs: 0.625rem; //10px
+$font-size-xs: 0.75rem; //12px
+$font-size-sm: 0.875rem; //14px
+$font-size-md: 0.9375rem; //15px
+$font-size-default: 1rem; //16px
+$font-size-lg: 1.125rem; //18px
+$font-size-xl: 1.25rem; //20px
+$font-size-xxl: 1.5rem; //24px
+$font-size-3xl: 2.652rem;  //42px
+$font-size-4xl: 4rem; //64px
+
+//BREAKPOINTS
+$bp-port-mobile: 23.44em; //(375px / 16px) = 23.44em
+$bp-land-mobile: 31.25em; //(500px / 16px) = 31.25em
+$bp-tablet: 48em; //(768px / 16px) = 48em
+$bp-laptop: 62em; //(992px / 16px) = 62em
+$bp-desktop: 75em; //(1200px / 16px) = 75em
+$bp-lg-desktop: 90em; //(1440px / 16px) = 90em
