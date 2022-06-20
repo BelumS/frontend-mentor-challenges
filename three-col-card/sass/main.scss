@@ -1,0 +1,124 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.fullBox;
+    font-family: 'Inter', sans-serif;
+    @include mix.defaultTransition; 
+}
+
+.container {
+    @include mix.respBoxY;
+    @include mix.flexCenter;
+}
+
+.cards {
+    @include mix.box(max-content);
+    @include mix.flexCenterColumn;
+    border: 1px solid var.$color-white;
+    border-radius: 7px;
+    transition: all .5s;
+    overflow: hidden;
+
+    @include mix.respond(tablet) {
+        @include mix.flexCenterRow;
+    }
+
+    & > *:first-child {
+        background-color: var.$theme-orange-light;
+    }
+
+    & > *:nth-child(2) {
+        background-color: var.$theme-cyan-dark-1;
+    }
+
+    & > *:last-child {
+        background-color: var.$theme-cyan-dark-2;
+    }
+}
+
+.card {
+    @include mix.flexCenterColumn;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: var.$theme-gray-light;
+    width: 250px;
+    height: 300px;
+    padding: 30px;
+    row-gap: 20px;
+
+    @include mix.respond(tablet) {
+        width: 230px;
+        height: 350px;
+    }
+
+    &__img {
+        @include mix.box(50px);
+        object-fit: contain;
+    }
+
+    &__title {
+        font-family: 'Big Shoulders Display', sans-serif;
+        font-size: 25px;
+        font-weight: 200;
+        letter-spacing: .4px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: var.$theme-white-paragraph;
+        font-size: 12px;
+    }
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    border: 1px solid var.$theme-gray-light;
+    border-radius: 20px;
+    outline: none;
+    background-color: var.$theme-gray-light;
+    cursor: pointer;
+    @include mix.defaultTransition;
+
+    &--card-1 {
+        color: var.$theme-orange-light;
+
+        &:hover {
+            background-color: var.$theme-orange-light;
+            color: var.$theme-gray-light;
+        }
+    }
+
+    &--card-2 {
+        color: var.$theme-cyan-dark-1;
+
+        &:hover {
+            background-color: var.$theme-cyan-dark-1;
+            color: var.$theme-gray-light;
+        }
+    }
+
+    &--card-3 {
+        color: var.$theme-cyan-dark-2;
+
+        &:hover {
+            background-color: var.$theme-cyan-dark-2;
+            color: var.$theme-gray-light;
+        }
+    }
+}
