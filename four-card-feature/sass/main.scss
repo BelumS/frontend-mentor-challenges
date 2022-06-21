@@ -1,0 +1,122 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.fullBox;
+    font-family: 'Poppins', sans-serif;
+    font-size: var.$font-size-md;
+    background-color: var.$color-gray-light;
+    @include mix.defaultTransition;
+    padding: 20px;
+    position: relative;
+}
+
+.container {
+    @include mix.respBoxY;
+    @include mix.flexCenterColumn;
+
+    // @include mix.respond(laptop) {}
+}
+
+.content {
+    @include mix.flexCenterColumn;
+    @include mix.fullBox;
+
+    &__heading {
+        font-weight: 200;
+        color: var.$color-blue-dark;
+
+        & span {
+            color: var.$color-black;
+            font-weight: 600;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 13px;
+        color: var.$color-blue-dark;
+        padding: 10px 30px;
+        opacity: 0.5;
+        width: 320px;
+    }
+}
+
+.card-container {
+    @include mix.flexCenterColumn;
+    margin-top: 10px;
+    position: relative;
+
+    & > *:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    & > * {
+
+        &:first-child {
+            border-top: 4px solid var.$theme-cyan;
+        }
+
+        &:nth-child(2) {
+            border-top: 4px solid var.$theme-red;
+        }
+
+        &:nth-child(3) {
+            border-top: 4px solid var.$theme-orange;
+        }
+
+        &:last-child {
+            border-top: 4px solid var.$theme-blue;
+        }
+    }
+}
+
+.card {
+    @include mix.flexCenterColumn;
+    padding: 40px;
+    width: 300px;
+    height: 210px;
+    border-radius: 10px;
+    box-shadow: -.1rem .1rem .2rem var.$color-blue-dark;
+    position: relative;
+
+    &__content {
+        align-self: flex-start;
+        margin-top: 10px;
+        margin-left: -10px;
+    }
+
+    &__title {
+        font-size: 19px;
+        opacity: 0.6;
+    }
+
+    &__text {
+        font-size: 12px;
+        color: var.$color-blue-dark;
+        opacity: 0.5;
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+
+    &__img {
+        align-self: flex-end;
+        @include mix.box(50px);
+        object-fit: cover;
+        margin-left: 10px;
+    }
+}

@@ -4,7 +4,7 @@
   "description": "Completed challenges from FrontEnd Mentor's challenges",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch ./social-proof/sass/main.scss ./social-proof/css/style.css"
+    "watch:sass": "sass --watch ./four-card-feature/sass/main.scss ./four-card-feature/css/style.css"
   },
   "repository": {
     "type": "git",

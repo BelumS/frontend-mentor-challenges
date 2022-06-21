@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  background-color: hsl(0deg, 0%, 98%);
+  transition: all 0.2s;
+  padding: 20px;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
+}
+.content__heading {
+  font-weight: 200;
+  color: hsl(234deg, 12%, 34%);
+}
+.content__heading span {
+  color: hsl(0deg, 0%, 0%);
+  font-weight: 600;
+}
+.content__text {
+  text-align: center;
+  font-size: 13px;
+  color: hsl(234deg, 12%, 34%);
+  padding: 10px 30px;
+  opacity: 0.5;
+  width: 320px;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  margin-top: 10px;
+  position: relative;
+}
+.card-container > *:not(:last-child) {
+  margin-bottom: 30px;
+}
+.card-container > *:first-child {
+  border-top: 4px solid hsl(180deg, 62%, 55%);
+}
+.card-container > *:nth-child(2) {
+  border-top: 4px solid hsl(0deg, 78%, 62%);
+}
+.card-container > *:nth-child(3) {
+  border-top: 4px solid hsl(34deg, 97%, 64%);
+}
+.card-container > *:last-child {
+  border-top: 4px solid hsl(212deg, 86%, 64%);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 40px;
+  width: 300px;
+  height: 210px;
+  border-radius: 10px;
+  box-shadow: -0.1rem 0.1rem 0.2rem hsl(234deg, 12%, 34%);
+  position: relative;
+}
+.card__content {
+  align-self: flex-start;
+  margin-top: 10px;
+  margin-left: -10px;
+}
+.card__title {
+  font-size: 19px;
+  opacity: 0.6;
+}
+.card__text {
+  font-size: 12px;
+  color: hsl(234deg, 12%, 34%);
+  opacity: 0.5;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+.card__img {
+  align-self: flex-end;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
