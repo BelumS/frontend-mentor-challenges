@@ -4,7 +4,7 @@
   "description": "Completed challenges from FrontEnd Mentor's challenges",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch ./css-projects/four-card-feature/sass/main.scss ./css-projects/four-card-feature/css/style.css"
+    "watch:sass": "sass --watch ./css-projects/huddle-landing-page/sass/main.scss ./css-projects/huddle-landing-page/css/style.css"
   },
   "repository": {
     "type": "git",
