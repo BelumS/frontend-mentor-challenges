@@ -21,7 +21,19 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
+  overflow: hidden;
   transition: all 0.2s;
+}
+@media only screen and (min-width: 500px) {
+  body {
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    background-image: url("../images/bg-desktop.svg");
+    padding-left: 30px;
+  }
 }
 
 .container {
@@ -35,10 +47,26 @@ body {
   color: hsl(0deg, 0%, 100%);
   padding-left: 30px;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 500px) {
   .container {
     width: 100%;
     min-height: 100vh;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    display: grid;
+    align-items: center;
+    justify-items: flex-start;
+    grid-template-rows: repeat(2, min-content) 100px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .logo-container {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
 }
 
@@ -49,18 +77,37 @@ body {
 
 .logo {
   object-fit: contain;
-  width: 120px;
-  height: 120px;
+  width: 32vw;
+  height: 32vw;
+}
+@media only screen and (min-width: 1200px) {
+  .logo {
+    width: 17vw;
+    height: 17vw;
+  }
 }
 
 .hero-container {
   margin-top: -50px;
 }
+@media only screen and (min-width: 1200px) {
+  .hero-container {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin-top: -140px;
+  }
+}
 
 .hero {
   object-fit: contain;
-  width: 320px;
-  height: 320px;
+  width: 85vw;
+  height: 85vw;
+}
+@media only screen and (min-width: 1200px) {
+  .hero {
+    width: 40vw;
+    height: 40vw;
+  }
 }
 
 .content {
@@ -68,23 +115,59 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  padding: 10px;
+  padding: 3.2vw;
   row-gap: 20px;
   text-align: center;
   line-height: 1.4;
 }
+@media only screen and (min-width: 1200px) {
+  .content {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: left;
+    align-self: flex-start;
+    padding: 10px 35px;
+    padding-left: 0;
+    margin-top: -30px;
+  }
+}
 .content__heading {
-  padding: 0 5px;
+  padding: 0 0.13vw;
   font-family: "Poppins", sans-serif;
-  font-size: 25px;
+  font-size: 7.8vw;
   font-weight: 400;
+}
+@media only screen and (min-width: 1200px) {
+  .content__heading {
+    font-size: 32px;
+    font-weight: 600;
+    align-self: flex-start;
+    padding-left: 3px;
+  }
 }
 .content__text {
   padding: 0 17px;
   font-size: 16px;
   font-weight: 200;
   opacity: 0.8;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 500px) {
+  .content__text {
+    font-size: 20px;
+    padding: 0 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content__text {
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .content__text {
+    font-size: 17px;
+    padding: 0 5px;
+  }
 }
 .content__btn {
   padding: 12px 30px;
@@ -97,6 +180,27 @@ body {
   outline: none;
   box-shadow: 0 8px 18px 3px rgba(76, 78, 97, 0.13);
   cursor: pointer;
+}
+@media only screen and (min-width: 500px) {
+  .content__btn {
+    padding: 15px 35px;
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content__btn {
+    padding: 20px 35px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .content__btn {
+    width: 30%;
+    padding: 15px 10px;
+    align-self: flex-start;
+    border-radius: 30px;
+    font-size: 18px;
+  }
 }
 .content__btn:hover, .content__btn:active {
   color: hsl(0deg, 0%, 100%);
@@ -115,6 +219,27 @@ body {
   left: 20%;
   transform: translateX(-60%);
 }
+@media only screen and (min-width: 500px) {
+  .icons {
+    left: 0;
+    transform: translateX(0);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .icons {
+    column-gap: 15px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .icons {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    justify-self: flex-end;
+    padding: 20px 20px 20px 0;
+    margin-top: -230px;
+    margin-right: 60px;
+  }
+}
 
 .icon {
   border: 1px solid hsl(0deg, 0%, 100%);
@@ -122,6 +247,22 @@ body {
   padding: 7px;
   font-size: 15px;
   cursor: pointer;
+}
+@media only screen and (min-width: 500px) {
+  .icon {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .icon {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .icon {
+    font-size: 14px;
+  }
 }
 .icon:hover, .icon:active {
   color: hsl(300deg, 69%, 71%);
