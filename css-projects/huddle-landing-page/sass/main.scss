@@ -1,0 +1,129 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.fullBox;
+    font-family: 'Open Sans', sans-serif;
+    font-size: var.$font-size-default;
+    background-color: var.$theme-violet;
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    @include mix.defaultTransition;
+}
+
+.container {
+    width: 350px;
+    height: var.$full-vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: var.$color-white;
+    padding-left: 30px;
+
+    @include mix.respond(laptop) {
+        @include mix.respBoxY;
+    }
+}
+
+.logo-container,
+.hero-container {
+    align-self: flex-start;
+}
+
+.logo {
+    object-fit: contain;
+    @include mix.box(120px);
+}
+
+.hero-container {
+    margin-top: -50px;
+}
+
+.hero {
+    object-fit: contain;
+    @include mix.box(320px);
+}
+
+.content {
+    @include mix.flexCenterColumn;
+    padding: 10px;
+    row-gap: 20px;
+    text-align: center;
+    line-height: 1.4;
+
+    &__heading {
+        padding: 0 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    &__text {
+        padding: 0 17px;
+        font-size: 16px;
+        font-weight: 200;
+        opacity: 0.8;
+        margin-bottom: 5px;
+    }
+
+    &__btn {
+        padding: 12px 30px;
+        width: 60%;
+        color: var.$theme-violet;
+        font-weight: 200;
+        font-size: 12px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        box-shadow: 0 8px 18px 3px rgba(76, 78, 97, 0.13);
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            color: var.$color-white;
+            background-color: var.$theme-magenta-light;
+        }
+    }
+}
+
+.icons {
+    @include mix.flexCenterRow;
+    column-gap: 15px;
+    margin-top: 60px;
+    padding-bottom: 30px;
+    position: relative;
+    left: 20%;
+    transform: translateX(-60%);
+}
+
+.icon {
+    border: 1px solid var.$color-white;
+    border-radius: 50%;
+    padding: 7px;
+    font-size: 15px;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        color: var.$theme-magenta-light;
+        border-color: var.$theme-magenta-light;
+    }
+}

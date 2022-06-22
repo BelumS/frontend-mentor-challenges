@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  background-color: hsl(257deg, 40%, 49%);
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.container {
+  width: 350px;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  color: hsl(0deg, 0%, 100%);
+  padding-left: 30px;
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+.logo-container,
+.hero-container {
+  align-self: flex-start;
+}
+
+.logo {
+  object-fit: contain;
+  width: 120px;
+  height: 120px;
+}
+
+.hero-container {
+  margin-top: -50px;
+}
+
+.hero {
+  object-fit: contain;
+  width: 320px;
+  height: 320px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 10px;
+  row-gap: 20px;
+  text-align: center;
+  line-height: 1.4;
+}
+.content__heading {
+  padding: 0 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+.content__text {
+  padding: 0 17px;
+  font-size: 16px;
+  font-weight: 200;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+.content__btn {
+  padding: 12px 30px;
+  width: 60%;
+  color: hsl(257deg, 40%, 49%);
+  font-weight: 200;
+  font-size: 12px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 8px 18px 3px rgba(76, 78, 97, 0.13);
+  cursor: pointer;
+}
+.content__btn:hover, .content__btn:active {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(300deg, 69%, 71%);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  column-gap: 15px;
+  margin-top: 60px;
+  padding-bottom: 30px;
+  position: relative;
+  left: 20%;
+  transform: translateX(-60%);
+}
+
+.icon {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  padding: 7px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.icon:hover, .icon:active {
+  color: hsl(300deg, 69%, 71%);
+  border-color: hsl(300deg, 69%, 71%);
+}
+
+/*# sourceMappingURL=style.css.map */
