@@ -115,7 +115,7 @@ body {
   width: 300px;
   height: 210px;
   border-radius: 10px;
-  box-shadow: -0.1rem 0.1rem 0.2rem hsl(234deg, 12%, 34%);
+  box-shadow: 0 8px 18px 3px rgba(76, 78, 97, 0.13);
   position: relative;
 }
 .card__content {
