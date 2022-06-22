@@ -29,6 +29,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
+  position: relative;
 }
 
 .content {
@@ -43,6 +44,11 @@ body {
   font-weight: 200;
   color: hsl(234deg, 12%, 34%);
 }
+@media only screen and (min-width: 992px) {
+  .content__heading {
+    font-size: 28px;
+  }
+}
 .content__heading span {
   color: hsl(0deg, 0%, 0%);
   font-weight: 600;
@@ -54,6 +60,12 @@ body {
   padding: 10px 30px;
   opacity: 0.5;
   width: 320px;
+}
+@media only screen and (min-width: 992px) {
+  .content__text {
+    width: 510px;
+    margin-bottom: 30px;
+  }
 }
 
 .card-container {
@@ -70,6 +82,13 @@ body {
 .card-container > *:first-child {
   border-top: 4px solid hsl(180deg, 62%, 55%);
 }
+@media only screen and (min-width: 992px) {
+  .card-container > *:first-child {
+    position: absolute;
+    top: 140px;
+    left: -330px;
+  }
+}
 .card-container > *:nth-child(2) {
   border-top: 4px solid hsl(0deg, 78%, 62%);
 }
@@ -78,6 +97,13 @@ body {
 }
 .card-container > *:last-child {
   border-top: 4px solid hsl(212deg, 86%, 64%);
+}
+@media only screen and (min-width: 992px) {
+  .card-container > *:last-child {
+    position: absolute;
+    top: 140px;
+    left: 330px;
+  }
 }
 
 .card {
