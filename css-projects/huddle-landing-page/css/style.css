@@ -21,7 +21,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: all 0.2s;
 }
 @media only screen and (min-width: 500px) {
@@ -33,6 +33,7 @@ body {
   body {
     background-image: url("../images/bg-desktop.svg");
     padding-left: 30px;
+    overflow-y: hidden;
   }
 }
 
@@ -58,7 +59,7 @@ body {
     display: grid;
     align-items: center;
     justify-items: flex-start;
-    grid-template-rows: repeat(2, min-content) 100px;
+    grid-template-rows: repeat(2, min-content) 60px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -77,8 +78,8 @@ body {
 
 .logo {
   object-fit: contain;
-  width: 32vw;
-  height: 32vw;
+  width: 30vw;
+  height: 30vw;
 }
 @media only screen and (min-width: 1200px) {
   .logo {
@@ -215,29 +216,24 @@ body {
   column-gap: 15px;
   margin-top: 60px;
   padding-bottom: 30px;
-  position: relative;
-  left: 20%;
-  transform: translateX(-60%);
-}
-@media only screen and (min-width: 500px) {
-  .icons {
-    left: 0;
-    transform: translateX(0);
-  }
 }
 @media only screen and (min-width: 768px) {
   .icons {
-    column-gap: 15px;
+    position: fixed;
+    bottom: 0;
+    right: 60%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .icons {
     grid-row: 3/4;
     grid-column: 2/3;
+    position: relative;
+    bottom: 100px;
+    left: 0;
     justify-self: flex-end;
+    align-self: center;
     padding: 20px 20px 20px 0;
-    margin-top: -230px;
-    margin-right: 60px;
   }
 }
 
