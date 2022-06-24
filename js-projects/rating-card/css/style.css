@@ -51,15 +51,17 @@ p {
   justify-content: center;
   flex-flow: column nowrap;
   width: 350px;
+  height: 400px;
   background-color: hsl(213deg, 19%, 18%);
   align-items: flex-start;
   border-radius: 15px;
   margin: 20px;
-  padding: 25px;
+  padding: 20px 30px;
   text-align: left;
 }
 .card--rating {
   row-gap: 20px;
+  display: none;
 }
 .card__img--star {
   object-fit: cover;
@@ -120,8 +122,22 @@ p {
   color: hsl(25deg, 97%, 53%);
 }
 .card--thanks {
-  visibility: hidden;
-  opacity: 0;
+  text-align: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.card__score {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgba(37, 45, 55, 0.9);
+  filter: brightness(130%);
+  opacity: 0.8;
+}
+.card__score-text {
+  color: hsl(25deg, 97%, 53%);
+  font-weight: 200;
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=style.css.map */
