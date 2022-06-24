@@ -1,0 +1,122 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+@use "../sass/base/utils";
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    @include mix.fullBox;
+    position: relative;
+    font-family: 'Overpass', sans-serif;
+    font-size: var.$font-size-default;
+    background-color: var.$color-blue-dark-2;
+    @include mix.defaultTransition;
+}
+
+p {
+    font-size: var.$font-size-md;
+}
+
+.container {
+    @include mix.flexCenterColumn;
+    @include mix.respBoxY;
+}
+
+.card {
+    @include mix.flexCenterColumn;
+    width: 350px;
+    background-color: var.$color-blue-dark-1;
+    align-items: flex-start;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 25px;
+    text-align: left;
+
+    &--rating {
+        row-gap: 20px;
+    }
+
+    &__img {
+
+        &--star {
+            object-fit: cover;
+            filter: brightness(115%);
+            --webkit-filter: brightness(115%);
+        }
+    }
+
+    &__heading {
+        color: var.$color-white;
+        font-weight: 500;
+    }
+
+    &__text {
+        color: var.$color-gray-light-2;
+        line-height: 1.5;
+        font-weight: 100;
+    }
+
+    &__ratings {
+        width: var.$full;
+        justify-self: flex-start;
+        @include mix.flexCenterRow;
+        justify-content: space-between;
+    }
+
+    &__rating {
+        filter: brightness(140%);
+        --webkit-filter: brightness(140%);
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            filter: brightness(100%);
+            --webkit-filter: brightness(100%);
+            background-color: var.$theme-orange;
+
+            & > span {
+                color: var.$color-white;
+            }
+        }
+
+        &-value {
+            font-size: var.$font-size-md;
+            color: var.$color-gray-light-2;
+        }
+    }
+
+    &__btn {
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        padding: 15px 20px;
+        @include mix.theme(var.$theme-orange, var.$color-white);
+        align-self: stretch;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 10px;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            padding: 15px 20px;
+            @include mix.theme(var.$color-white, var.$theme-orange);
+        }
+    }
+
+    &--thanks {
+        @include mix.hide;
+    }
+}

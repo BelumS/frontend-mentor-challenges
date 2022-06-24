@@ -1,0 +1,11 @@
+@use "../abstracts/var";
+@use "../abstracts/mix";
+
+.u-encircled {
+    @include mix.flexCenter;
+    border: none;
+    background-color: var.$color-blue-dark-1;
+    padding: 15px;
+    border-radius: 100%;
+    overflow: hidden; 
+}
