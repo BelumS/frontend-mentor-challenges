@@ -51,6 +51,7 @@ p {
 
     &--rating {
         row-gap: 20px;
+        display: none;
     }
 
     &__img {
@@ -142,4 +143,13 @@ p {
             font-size: 14px;
         }
     }
+}
+
+.active {
+    display: flex;
+}
+
+.selected {
+    background-color: rgba(var.$color-blue-dark-1, 0.9);
+    filter: brightness(250%);
 }

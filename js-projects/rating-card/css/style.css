@@ -66,6 +66,7 @@ p {
 }
 .card--rating {
   row-gap: 20px;
+  display: none;
 }
 .card__img--star {
   object-fit: cover;
@@ -143,6 +144,15 @@ p {
   color: hsl(25deg, 97%, 53%);
   font-weight: 200;
   font-size: 14px;
+}
+
+.active {
+  display: flex;
+}
+
+.selected {
+  background-color: rgba(37, 45, 55, 0.9);
+  filter: brightness(250%);
 }
 
 /*# sourceMappingURL=style.css.map */
