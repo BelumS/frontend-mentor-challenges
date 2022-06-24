@@ -95,6 +95,7 @@ p {
   filter: brightness(140%);
   --webkit-filter: brightness(140%);
   cursor: pointer;
+  transition: all 0.2s;
 }
 .card__rating:hover, .card__rating:active {
   filter: brightness(100%);
@@ -120,6 +121,7 @@ p {
   letter-spacing: 2px;
   margin-top: 10px;
   cursor: pointer;
+  transition: all 0.2s;
 }
 .card__btn:hover, .card__btn:active {
   padding: 15px 20px;
