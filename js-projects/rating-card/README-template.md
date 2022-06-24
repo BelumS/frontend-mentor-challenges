@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/BelumS/frontend-mentor-challenges/tree/main/js-projects/rating-card)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://wondrous-zuccutto-e9a615.netlify.app/)
 
 ## My process
 
