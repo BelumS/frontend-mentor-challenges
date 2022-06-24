@@ -45,9 +45,12 @@ p {
     padding: 20px 30px;
     text-align: left;
 
+    @include mix.respond(land-mobile) {
+        width: 380px;
+    }
+
     &--rating {
         row-gap: 20px;
-        display: none;
     }
 
     &__img {
@@ -122,6 +125,7 @@ p {
         text-align: center;
         align-items: center;
         row-gap: 20px;
+        display: none;
     }
 
     &__score {
