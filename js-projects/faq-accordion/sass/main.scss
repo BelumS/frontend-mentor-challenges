@@ -54,18 +54,21 @@ body {
         @include mix.box(200px);
         // box-shadow: 0 10px 10px 10px rgba(var.$color-black, 0.8);
         //TODO: hover the element over a shadow?
-        position: fixed;
-        top: -15px;
+        position: absolute;
+        top: -330px;
     }
 
     &__heading {
-        position: fixed;
-        top: 225px;
+        position: absolute;
+        top: -110px;
         font-weight: 600;
         font-size: 29px;
     }
 
     &__accordions {
+        @include mix.flexCenterColumn;
+        align-items: flex-start;
+        row-gap: 10px;
         width: inherit;
         position: absolute;
         top: -50px;
@@ -73,7 +76,7 @@ body {
 
     &__accordion {
         position: relative;
-        right: 5px;
+        right: 1px;
     }
 
     &__top,
@@ -86,10 +89,12 @@ body {
     }
 
     &__top {
-        width: var.$full;
+        justify-content: space-around;
+        max-width: var.$full;
         border-bottom: 1px solid var.$color-blue-light-1;
         column-gap: 10px;
         padding: 10px;
+        padding-right: 0;
         position: relative;
         transition: border .4s;
         backface-visibility: hidden;
@@ -101,8 +106,6 @@ body {
         }
 
         &-arrows {
-            position: relative;
-
             & > * {
                 display: none;
                 cursor: pointer;
@@ -110,10 +113,10 @@ body {
             }
         }
 
-        &-arrow-down {
+        &-arrow-up {
             position: absolute;
-            top: 4px;
-            left: 0;
+            top: 15px;
+            right: 2px;
             transform: rotate(180deg);
         }
     }

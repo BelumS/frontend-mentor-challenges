@@ -59,23 +59,29 @@ body {
 .card__img {
   width: 200px;
   height: 200px;
-  position: fixed;
-  top: -15px;
+  position: absolute;
+  top: -330px;
 }
 .card__heading {
-  position: fixed;
-  top: 225px;
+  position: absolute;
+  top: -110px;
   font-weight: 600;
   font-size: 29px;
 }
 .card__accordions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  row-gap: 10px;
   width: inherit;
   position: absolute;
   top: -50px;
 }
 .card__accordion {
   position: relative;
-  right: 5px;
+  right: 1px;
 }
 .card__top, .card__bottom {
   display: flex;
@@ -88,10 +94,12 @@ body {
   width: 105%;
 }
 .card__top {
-  width: 100%;
+  justify-content: space-around;
+  max-width: 100%;
   border-bottom: 1px solid rgb(231, 231, 233);
   column-gap: 10px;
   padding: 10px;
+  padding-right: 0;
   position: relative;
   transition: border 0.4s;
   backface-visibility: hidden;
@@ -101,18 +109,15 @@ body {
   font-weight: 200;
   color: hsl(240deg, 6%, 50%);
 }
-.card__top-arrows {
-  position: relative;
-}
 .card__top-arrows > * {
   display: none;
   cursor: pointer;
   transition: all 0.4s;
 }
-.card__top-arrow-down {
+.card__top-arrow-up {
   position: absolute;
-  top: 4px;
-  left: 0;
+  top: 15px;
+  right: 2px;
   transform: rotate(180deg);
 }
 .card__bottom {
