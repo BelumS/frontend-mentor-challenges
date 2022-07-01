@@ -14,7 +14,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
 
 ## Overview
@@ -29,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/ss.png)
 
 ### Links
 
@@ -48,40 +47,55 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+I learned how to:
+- Add event listeners to multiple elements in a list
+- Traverse the DOM tree to and update only the specified elements
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+cardAccordions.forEach(accordion => {
+  const cardTop = accordion.firstElementChild;
+  const accordionText = cardTop.firstElementChild;
+  const arrows = cardTop.lastElementChild;
+  const upArrow = arrows.firstElementChild;
+  const downArrow = arrows.lastElementChild;
+  const cardBottom = accordion.lastElementChild;
+
+  downArrow.addEventListener('click', () => {
+    toggle(downArrow);
+    add(upArrow);
+
+    accordionText.style.fontWeight = '600';
+    accordionText.style.color = 'black';
+
+    cardTop.style.paddingBottom = '3px';
+    cardTop.style.border = 'none';
+
+    add(cardBottom, 'active');
+    cardBottom.style.paddingBottom = '10px';
+    cardBottom.style.borderBottom = borderBottomStyle;
+  });
+  ...
+});
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- Create a Dropdown Element 
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- Use `background-image` over an `<img>` so I could respond with a different sized image
+```html
+<div class="card__img">&nbsp;</div>
+```
+```scss
+    &__img {
+        @include mix.box(200px);
+        ...
+        background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
+        ...
+    }    
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I want to learn to use Flexbox and Grid to create seamless alignments that can be easily altered. I also want to improve my JS skills,
+as I struggled on that, as well as maintaining the proper CSS after toggling elements.
 
 ## Author
 

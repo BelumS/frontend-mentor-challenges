@@ -2,3 +2,4 @@
 **/design/
 package-lock.json
 style-guide.md
+.DS_Store

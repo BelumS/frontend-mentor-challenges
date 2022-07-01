@@ -25,6 +25,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 50px;
+
+    @include mix.respond(laptop) {
+        background-image: linear-gradient(to bottom, rgba(var.$theme-violet-light, 0.9), rgba(var.$theme-blue-light, 0.8)), url(../images/bg-pattern-desktop.svg);
+    }
 }
 
 .container {
@@ -35,19 +39,33 @@ body {
 .card {
     @include mix.flexCenterColumn;
     width: 330px;
-    height: 470px;
+    height: 420px;
     padding: 20px;
     border: none;
     border-radius: 20px;
     background-color: var.$color-white;
     position: relative;
     backface-visibility: hidden;
+    z-index: 1;
+
+    @include mix.respond(laptop) {
+        width: 850px;
+        height: 500px;
+        overflow: hidden;
+    }
 
     &__wrapper {
-        width: var.$full;
+        @include mix.box(var.$full);
         @include mix.flexCenterColumn;
         position: relative;
-        top: -20px;
+        top: 175px;
+        z-index: 1;
+
+        @include mix.respond(laptop) {
+            display: grid;
+            grid-template-rows: max-content;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__img {
@@ -55,14 +73,54 @@ body {
         // box-shadow: 0 10px 10px 10px rgba(var.$color-black, 0.8);
         //TODO: hover the element over a shadow?
         position: absolute;
-        top: -330px;
+        top: -285px;
+        background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
+        // z-index: 2;
+
+        // &::after {
+        //     content: '';
+        //     display: inline-block;
+        //     width: 230px;
+        //     height: 60px;
+        //     border: 1px solid black;
+        //     background-color: black;
+        //     opacity: .1;
+        //     transform: skew(-60deg) translateY(110px) translateX(170px) rotateY(40deg) rotateZ(12deg);
+        //     z-index: 1;
+        // }
+
+        @include mix.respond(laptop) {
+            @include mix.box(455px);
+            background: url(../images/illustration-woman-online-desktop.svg) no-repeat;
+            background-size: contain;
+            grid-column: 1 / 2;
+            position: relative;
+            top: -140px;
+            left: -90px;
+
+            &-box {
+                @include mix.box(140px);
+                background: url(../images/illustration-box-desktop.svg) no-repeat;
+                background-size: contain;
+                grid-column: 1 / 2;
+                position: absolute;
+                top: 43%;
+                left: -7%;
+                z-index: 2;
+            }
+        }
     }
 
     &__heading {
         position: absolute;
-        top: -110px;
+        top: -115px;
         font-weight: 600;
         font-size: 29px;
+
+        @include mix.respond(laptop) {
+            grid-column: 2 / 3;
+            left: -20px;
+        }
     }
 
     &__accordions {
@@ -71,7 +129,15 @@ body {
         row-gap: 10px;
         width: inherit;
         position: absolute;
-        top: -50px;
+        top: -70px;
+
+        @include mix.respond(laptop) {
+            grid-column: 2 / 3;
+            width: 80%;
+            position: relative;
+            top: -130px;
+            left: -30px;
+        }
     }
 
     &__accordion {
