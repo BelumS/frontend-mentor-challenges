@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/BelumS/frontend-mentor-challenges/tree/main/js-projects/)
-- Live Site URL: [Netlify]()
+- Live Site URL: [Netlify](https://soft-dolphin-858fbd.netlify.app/)
 
 ## My process
 
