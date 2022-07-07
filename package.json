@@ -4,7 +4,7 @@
   "description": "Completed challenges from FrontEnd Mentor's challenges",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch ./js-projects/faq-accordion/sass/main.scss ./js-projects/faq-accordion/css/style.css"
+    "watch:sass": "sass --watch ./js-projects/faq-accordion-no-script/sass/main.scss ./js-projects/faq-accordion-no-script/css/style.css"
   },
   "repository": {
     "type": "git",

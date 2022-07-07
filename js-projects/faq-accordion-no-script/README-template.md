@@ -4,7 +4,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 
 ## Table of contents
 
-- [Frontend Mentor - FAQ accordion card solution](#frontend-mentor---faq-accordion-card-solution)
+- [Frontend Mentor - FAQ accordion card solution - with no JS](#frontend-mentor---faq-accordion-card-solution)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
