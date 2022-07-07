@@ -1,0 +1,28 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: var.$font-size-xs;
+    background-color: var.$theme-violet-light;
+    background-image: linear-gradient(to bottom, rgba(var.$theme-violet-light, 0.9), rgba(var.$theme-blue-light, 0.8)), url(../images/bg-pattern-mobile.svg);
+}
+
+.card {
+    @include mix.flexCenterColumn;
+    @include mix.respBox;
+}
