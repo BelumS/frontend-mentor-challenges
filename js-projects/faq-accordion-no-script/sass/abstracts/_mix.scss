@@ -6,9 +6,13 @@
     min-height: $val;
 };
 
-//TODO: May not be necessary
 @mixin fullBox {
     @include box(var.$full);
+}
+
+@mixin respBox {
+    min-height: var.$full-vh;
+    max-width: var.$full-vw;
 }
 
 // ALIGNMENTS
