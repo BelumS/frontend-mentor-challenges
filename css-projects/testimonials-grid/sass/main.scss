@@ -1,0 +1,81 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Confused:wght@500;600&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 0.8125rem;
+    background-color: var.$color-gray-light;
+}
+
+// 1. "Verified Graduate" has the same color as the person's name with 50% opacity
+// 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+.container {
+    @include mix.flexCenterColumn;
+    @include mix.respBox;
+}
+
+.card {
+    max-width: 355px;
+    border-radius: 20px;
+    padding: 35px;
+    overflow: hidden;
+
+    &--main {
+        background-color: var.$theme-violet;
+        color: var.$color-gray-light;
+    }
+
+    &__top {
+        @include mix.flexCenter;
+        justify-content: flex-start;
+        column-gap: 20px;
+    }
+
+    &__img {
+        max-width: 15%;
+        object-fit: cover;
+        border: 2px solid rgba(var.$color-gray-light, 0.4);
+        border-radius: 50%;
+    }
+
+    &__text-container {
+        @include mix.flexCenterColumn;
+        align-items: flex-start;
+        row-gap: 5px;
+    }
+
+    &__name {
+
+    }
+
+    &__verified {
+
+    }
+
+    &__bottom {
+
+    }
+
+    &__heading {
+
+    }
+
+    &__description {
+
+    }
+}
