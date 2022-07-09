@@ -1,0 +1,114 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var.$font-size-sm;
+    background-color: var.$theme-cream;
+}
+
+.container {
+    @include mix.flexCenterColumn;
+    @include mix.respBox;
+}
+
+.card {
+    max-width: 340px;
+    background-color: var.$color-white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &__top,
+    &__bottom {
+        min-height: calc(600px / 2.6);
+    }
+
+    &__bottom {
+        @include mix.flexCenterColumn;
+        align-items: flex-start;
+        padding: 25px;
+        row-gap: 10px;
+    }
+
+    &__img {
+        min-height: inherit;
+        background-image: url(../images/image-product-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__subtitle {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    &__subtitle,
+    &__description {
+        color: var.$color-blue-gray;
+        font-weight: 100;
+    }
+
+    &__title,
+    &__price {
+        font-family: 'Fraunces', sans-serif;
+        font-size: 30px;
+    }
+
+    &__description {
+        line-height: 1.7;
+        font-size: 13px;
+        opacity: .9;
+    }
+
+    &__prices {
+        margin-top: 30px;
+        @include mix.flexCenter;
+        flex-flow: row nowrap;
+        column-gap: 30px;
+    }
+
+    &__price {
+        color: var.$theme-cyan-dark;
+
+        &--slashed {
+            color: var.$color-blue-gray;
+            text-decoration: line-through;
+        }
+    }
+
+    &__button {
+        @include mix.flexCenter;
+        column-gap: 10px;
+        align-self: stretch;
+        margin-top: 10px;
+        border: none;
+        outline: none;
+        background-color: rgba(var.$theme-cyan-dark, 0.9);
+        color: var.$color-white;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        @include mix.defaultTransition;
+
+        &:hover {
+            background-color: var.$theme-cyan-dark;
+        }
+    }
+}
