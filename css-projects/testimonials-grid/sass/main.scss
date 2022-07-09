@@ -1,7 +1,7 @@
 @use "../sass/abstracts/var";
 @use "../sass/abstracts/mix";
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Confused:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
 
 *,
 *::before,
@@ -21,33 +21,80 @@ body {
     background-color: var.$color-gray-light;
 }
 
-// 1. "Verified Graduate" has the same color as the person's name with 50% opacity
-// 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
-
 .container {
     @include mix.flexCenterColumn;
     @include mix.respBox;
+    row-gap: 20px;
+
+    & > * {
+        &:first-child,
+        &:nth-child(2) {
+            color: var.$color-gray-light;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3)
+        &:last-child {
+            & > .card__top > .card__img {
+                border: none;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: var.$theme-blue-gray-dark;
+        }
+
+        &:nth-child(3),
+        &:last-child {
+            color: var.$theme-blue-gray-dark;
+            background-color: var.$color-white;
+        }
+
+        &:nth-child(4) {
+            color: var.$color-gray-light;
+            background-color: var.$theme-blue-black-dark;
+
+            & > .card__top > .card__img {
+                border-color: var.$theme-violet;
+            }
+        }
+    }
 }
 
 .card {
-    max-width: 355px;
-    border-radius: 20px;
+    @include mix.flexCenterColumn;
+    max-width: 350px;
+    border-radius: 10px;
     padding: 35px;
+    padding-top: 20px;
+    row-gap: 15px;
     overflow: hidden;
 
     &--main {
         background-color: var.$theme-violet;
-        color: var.$color-gray-light;
+        position: relative;
+
+        &::before {
+            content: '\201C';
+            display: inline;
+            font-family: sans-serif;
+            font-size: 400px;
+            position: absolute;
+            top: -75px;
+            right: 10px;
+            opacity: 0.35;
+        }
     }
 
     &__top {
+        align-self: flex-start;
         @include mix.flexCenter;
         justify-content: flex-start;
-        column-gap: 20px;
+        column-gap: 10px;
     }
 
     &__img {
-        max-width: 15%;
+        max-width: 24%;
         object-fit: cover;
         border: 2px solid rgba(var.$color-gray-light, 0.4);
         border-radius: 50%;
@@ -60,22 +107,28 @@ body {
     }
 
     &__name {
-
+        font-size: 14px;
     }
 
     &__verified {
-
+        opacity: 0.5;
+        font-size: 12px;
     }
 
     &__bottom {
-
+        @include mix.flexCenterColumn;
+        row-gap: 20px;
     }
 
     &__heading {
-
+        font-size: 21px;
+        font-weight: 500;
     }
 
     &__description {
-
+        font-size: 14px;
+        font-weight: 200;
+        opacity: 0.7;
+        line-height: 1.4;
     }
 }
