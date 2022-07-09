@@ -33,6 +33,13 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
+@media only screen and (min-width: 768px) {
+  .card {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .card__top, .card__bottom {
   min-height: 230.7692307692px;
 }
@@ -51,6 +58,12 @@ body {
   background-image: url(../images/image-product-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media only screen and (min-width: 768px) {
+  .card__img {
+    background-image: url(../images/image-product-desktop.jpg);
+    min-height: 100%;
+  }
 }
 .card__subtitle {
   letter-spacing: 5px;

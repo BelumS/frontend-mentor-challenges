@@ -32,6 +32,12 @@ body {
     border-radius: 10px;
     overflow: hidden;
 
+    @include mix.respond(tablet) {
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     &__top,
     &__bottom {
         min-height: calc(600px / 2.6);
@@ -49,6 +55,11 @@ body {
         background-image: url(../images/image-product-mobile.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include mix.respond(tablet) {
+            background-image: url(../images/image-product-desktop.jpg);
+            min-height: var.$full;
+        }
     }
 
     &__subtitle {
