@@ -45,23 +45,23 @@ body {
     gap: 20px;
   }
   .card-container > *:first-child {
-    align-self: flex-start;
-    grid-row: 1/2;
     grid-column: 1/span 2;
   }
-  .card-container > *:nth-child(2) {
+  .card-container > *:first-child, .card-container > *:nth-child(2) {
     align-self: flex-start;
     grid-row: 1/2;
+  }
+  .card-container > *:nth-child(2) {
     grid-column: 3/4;
   }
   .card-container > *:nth-child(3) {
-    align-self: flex-end;
-    grid-row: 2/3;
     grid-column: 1/2;
   }
-  .card-container > *:nth-child(4) {
+  .card-container > *:nth-child(3), .card-container > *:nth-child(4) {
     align-self: flex-end;
     grid-row: 2/3;
+  }
+  .card-container > *:nth-child(4) {
     grid-column: 2/span 2;
   }
   .card-container > *:last-child {
