@@ -24,7 +24,51 @@ body {
 .container {
     @include mix.flexCenterColumn;
     @include mix.respBox;
+}
+
+.card-container {
+    @include mix.flexCenterColumn;
     row-gap: 20px;
+
+    @include mix.respond(desktop) {
+        max-width: 1200px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        & > * {
+            &:first-child {
+                align-self: flex-start;
+                grid-row: 1 / 2;
+                grid-column: 1 / span 2;
+            }
+
+            &:nth-child(2) {
+                align-self: flex-start;
+                grid-row: 1 / 2;
+                grid-column: 3 / 4;
+            }
+
+            &:nth-child(3) {
+                align-self: flex-end;
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+
+            &:nth-child(4) {
+                align-self: flex-end;
+                grid-row: 2 / 3;
+                grid-column: 2 / span 2;
+            }
+
+            &:last-child {
+                align-self: stretch;
+                grid-row: 1 / span 2;
+                grid-column: 4 / 5;
+            }
+        }
+    }
 
     & > * {
         &:first-child,
@@ -69,6 +113,12 @@ body {
     padding-top: 20px;
     row-gap: 15px;
     overflow: hidden;
+
+    @include mix.respond(desktop) {
+        @include mix.fullBox;
+        padding: 25px;
+        padding-top: 15px;
+    }
 
     &--main {
         background-color: var.$theme-violet;
@@ -123,6 +173,10 @@ body {
     &__heading {
         font-size: 21px;
         font-weight: 500;
+
+        @include mix.respond(desktop) {
+            font-size: 18px;
+        }
     }
 
     &__description {
