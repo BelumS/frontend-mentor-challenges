@@ -24,6 +24,7 @@ body {
 
     @include mix.respond(laptop) {
         background-image: url(../images/bg-desktop.png);
+        background-position: top;
     }
 }
 
