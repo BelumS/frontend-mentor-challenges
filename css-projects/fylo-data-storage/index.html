@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Fylo Data Storage">
+  <meta name="description" content="Front End Mentor - Fylo Data Storage Component">
+  <meta name="author" content="Bel Sahn, beldsahn@protonmail.com">
+  <meta name="url" content="https://netlify.app">
+  <meta name="robots" content="noindex,follow">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+</head>
+<body dir="ltr">
+  <main class="container">
+    <section class="card-container">
+      <div class="card card--top">
+        <img src="images/logo.svg" alt="Logo" class="card__logo">
+        <div class="card__icon-container">
+          <img src="images/icon-document.svg" alt="Document" class="card__icon">
+          <img src="images/icon-folder.svg" alt="Folder" class="card__icon">
+          <img src="images/icon-upload.svg" alt="Upload" class="card__icon">
+        </div>
+      </div>
+
+      <div class="card card--bottom">
+        <p class="card__description">You&rsquo;ve used <span class="card__description--label">815 GB</span> of your storage</p>
+
+        <div class="card__storage-container">
+          <div class="card__slider-container">
+            <input type="range" min="0" max="1000" value="815" class="card__slider">
+          </div>
+
+          <div class="card__label-container">
+            <span class="card__label">0 GB</span>
+            <span class="card__label">1000 GB</span>
+          </div>
+        </div>
+
+        <aside class="card__remaining-space">
+          <span class="card__remaining-space--number">185</span>
+          <span class="card__remaining-space--label">GB Left</span>
+        </aside>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -4,7 +4,7 @@
   "description": "Completed challenges from FrontEnd Mentor's challenges",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch ./css-projects/testimonials-grid/sass/main.scss ./css-projects/testimonials-grid/css/style.css"
+    "watch:sass": "sass --watch ./css-projects/fylo-data-storage/sass/main.scss ./css-projects/fylo-data-storage/css/style.css"
   },
   "repository": {
     "type": "git",

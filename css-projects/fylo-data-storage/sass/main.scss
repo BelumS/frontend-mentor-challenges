@@ -1,0 +1,217 @@
+@use "../sass/abstracts/var";
+@use "../sass/abstracts/mix";
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: var.$font-size-sm;
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mix.respond(laptop) {
+        background-image: url(../images/bg-desktop.png);
+    }
+}
+
+.container {
+    @include mix.flexCenterColumn;
+    @include mix.respBox;
+}
+
+.card-container {
+    @include mix.flexCenterColumn;
+    align-items: start;
+    row-gap: 15px;
+}
+
+.card {
+    @include mix.flexCenterColumn;
+    align-items: start;
+    max-width: 310px;
+    min-height: max-content; 
+    @include mix.theme(var.$color-blue-dark-1, var.$color-blue-gray);
+    padding: 40px;
+    border-radius: 10px;
+
+    &--top {
+        align-self: stretch;
+        border-top-right-radius: 100px;
+    }
+
+    &__logo {
+        object-fit: contain;
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    &__icon-container {
+        @include mix.flexCenter;
+        column-gap: 15px;
+    }
+
+    &__icon {
+        @include mix.flexCenter;
+        background-color: var.$color-blue-dark-2;
+        padding: 10px;
+        border-radius: 10px;
+        object-fit: contain;
+        @include mix.box(45px);
+    }
+
+    &--bottom {
+        position: relative;
+    }
+
+    &__description {
+        position: relative;
+        top: -5px;
+        text-align: center;
+        filter: brightness(170%);
+        opacity: 0.7;
+        letter-spacing: 1.3;
+
+        &--label {
+            font-weight: bold;
+            opacity: 1;
+            color: var.$color-white;
+            filter: brightness(170%);
+        }
+    }
+
+    &__label-container {
+        @include mix.flexCenter;
+        flex-flow: row nowrap;
+        align-self: stretch;
+
+        & > *:first-child {
+            text-align: left;
+        }
+
+        & > *:last-child {
+            text-align: right;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        filter: brightness(170%);
+        font-weight: bold;
+        font-size: 12px;
+        min-width: 50%;
+    }
+
+    &__storage-container {
+        align-self: stretch;
+        @include mix.flexCenterColumn;
+    }
+
+    &__slider-container {
+        margin: 5px 0;
+        align-self: stretch;
+        position: relative;
+    }
+
+    &__slider {
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+
+        &:focus {
+            outline: none;
+
+            &::-webkit-slider-thumb {
+                outline: 3px solid var.$color-blue-dark-1;
+                outline-offset: 0.1rem;
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 100%;
+            height: 1.4rem;
+            border-radius: 1rem;
+            background-color: var.$color-blue-dark-2;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        &::-webkit-slider-runnable-track {
+            background: var.$theme-primary;
+            height: 1rem;
+            border-radius: 1rem;
+            z-index: 2;
+        }
+
+        &::-moz-range-track {
+            background: var.$theme-primary;
+            height: 1rem;
+            border-radius: 1rem;
+        }
+
+        &::-webkit-slider-thumb {
+            appearance: none;
+            -webkit-appearance: none;
+            position: relative;
+            top: 1px;
+            @include mix.box(.8rem);
+            border-radius: 50%;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        &::-moz-range-thumb {
+            appearance: none;
+            -moz-appearance: none;
+            position: relative;
+            top: 1px;
+            @include mix.box(.8rem);
+            border-radius: 50%;
+            background-color: white;
+        }
+    }
+
+    &__remaining-space {
+        align-self: center;
+        @include mix.flexCenter;
+        column-gap: 10px;
+        position: absolute;
+        bottom: -40px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var.$color-white;
+
+        &--number {
+            font-size: 40px;
+            color: var.$color-black;
+            font-weight: 700;
+        }
+
+        &--label {
+            align-self: center;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+    }
+
+}
