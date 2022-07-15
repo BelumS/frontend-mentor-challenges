@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
 }
 
 @mixin flexCenterColumn {

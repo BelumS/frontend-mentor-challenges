@@ -28,7 +28,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   flex-flow: column nowrap;
   min-height: 100vh;
   max-width: 100vw;
@@ -38,17 +38,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   flex-flow: column nowrap;
   align-items: start;
   row-gap: 15px;
+}
+@media only screen and (min-width: 992px) {
+  .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: space-around;
+    min-width: 800px;
+    row-gap: 0;
+  }
 }
 
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   flex-flow: column nowrap;
   align-items: start;
   max-width: 310px;
@@ -71,14 +83,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   column-gap: 15px;
 }
 .card__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   background-color: hsl(229deg, 57%, 11%);
   padding: 10px;
   border-radius: 10px;
@@ -88,6 +100,12 @@ body {
 }
 .card--bottom {
   position: relative;
+}
+@media only screen and (min-width: 992px) {
+  .card--bottom {
+    max-width: 500px;
+    flex: 1;
+  }
 }
 .card__description {
   position: relative;
@@ -107,7 +125,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   flex-flow: row nowrap;
   align-self: stretch;
 }
@@ -129,7 +147,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   flex-flow: column nowrap;
 }
 .card__slider-container {
@@ -205,13 +223,34 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   column-gap: 10px;
   position: absolute;
   bottom: -40px;
   padding: 10px;
   border-radius: 10px;
   background-color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (min-width: 992px) {
+  .card__remaining-space {
+    position: absolute;
+    max-height: 70px;
+    top: -50px;
+    right: 45px;
+    bottom: 40px;
+    padding: 10px;
+  }
+  .card__remaining-space::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    clip-path: polygon(100% 0, 31% 0, 100% 100%);
+  }
 }
 .card__remaining-space--number {
   font-size: 40px;

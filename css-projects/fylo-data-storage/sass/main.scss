@@ -36,6 +36,14 @@ body {
     @include mix.flexCenterColumn;
     align-items: start;
     row-gap: 15px;
+
+    @include mix.respond(laptop) {
+        @include mix.flexCenter;
+        align-items: flex-end;
+        justify-content: space-around;
+        min-width: 800px;
+        row-gap: 0;
+    }
 }
 
 .card {
@@ -74,6 +82,11 @@ body {
 
     &--bottom {
         position: relative;
+
+        @include mix.respond(laptop) {
+            max-width: 500px;
+            flex: 1;
+        }
     }
 
     &__description {
@@ -203,6 +216,27 @@ body {
         padding: 10px;
         border-radius: 10px;
         background-color: var.$color-white;
+
+        @include mix.respond(laptop) {
+            position: absolute;
+            max-height: 70px;
+            top: -50px;
+            right: 45px;
+            bottom: 40px;
+            padding: 10px;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 40px;
+                background-color: white;
+                position: absolute;
+                bottom: -20px;
+                right: 0;
+                clip-path: polygon(100% 0, 31% 0, 100% 100%);
+            }
+        }
 
         &--number {
             font-size: 40px;
