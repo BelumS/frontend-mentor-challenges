@@ -126,11 +126,14 @@ body {
     }
 
     &__slider {
-        width: 100%;
+        width: 81.5%;
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
         background: transparent;
+        cursor: pointer;
+        border: none;
+        z-index: 2;
 
         &:focus {
             outline: none;
@@ -157,7 +160,7 @@ body {
 
         &::-webkit-slider-runnable-track {
             background: var.$theme-primary;
-            height: 1rem;
+            height: .97rem;
             border-radius: 1rem;
             z-index: 2;
         }
@@ -172,11 +175,12 @@ body {
             appearance: none;
             -webkit-appearance: none;
             position: relative;
-            top: 1px;
-            @include mix.box(.8rem);
+            top: 2px;
+            @include mix.box(.75rem);
             border-radius: 50%;
             background-color: white;
             cursor: pointer;
+            z-index: 2;
         }
 
         &::-moz-range-thumb {
