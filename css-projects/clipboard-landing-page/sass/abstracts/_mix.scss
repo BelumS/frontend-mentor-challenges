@@ -1,0 +1,131 @@
+@use "../abstracts/var";
+
+// DIMENSIONS
+@mixin box($val) {
+    max-width: $val;
+    min-height: $val;
+};
+
+@mixin fullBox {
+    @include box(var.$full);
+}
+
+@mixin respBox {
+    min-height: var.$full-vh;
+    max-width: var.$full-vw;
+}
+
+// ALIGNMENTS
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+}
+
+@mixin flexCenterColumn {
+    @include flexCenter;
+    flex-flow: column nowrap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
+    place-content: center;
+}
+
+//Explicit Row Max
+@mixin expFirstRowMax {
+    grid-row: 1 / -1;
+}
+
+//Explicit Column Max
+@mixin expFirstColMax {
+    grid-column: 1 / -1;
+}
+
+// POSITIONING
+@mixin absTopLeft($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
+@mixin absBehind {
+    @include absTopLeft(0, 0);
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absCenterBottom {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+// COLORS
+@mixin theme($bgColor, $color) {
+    background-color: $bgColor;
+    color: $color;
+}
+
+// EFFECTS
+@mixin boxShadowBlack($x, $y, $al) {
+    box-shadow: 0 $x $y rgba(#000, $al);
+}
+
+// ANIMATIONS
+@mixin defaultTransition {
+    transition: all .2s;
+}
+
+@mixin defaultTransitionTime($time) {
+    transition: all $time;
+}
+
+@mixin customTransition($prop, $time) {
+    transition: $prop $time;
+}
+
+@mixin show {
+    visibility: visible;
+    opacity: 1;
+}
+
+@mixin hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+// MEDIA QUERY MANAGER
+@mixin respond($bp) {
+    @if ($bp == port-mobile) {
+        @media only screen and (min-width: var.$bp-port-mobile) { @content; }
+    }
+
+    @if ($bp == land-mobile) {
+        @media only screen and (min-width: var.$bp-land-mobile) { @content; }
+    }
+
+    @if ($bp == tablet) {
+        @media only screen and (min-width: var.$bp-tablet) { @content; }
+    }
+
+    @if ($bp == laptop) {
+        @media only screen and (min-width: var.$bp-laptop) { @content; }
+    }
+
+    @if ($bp == desktop) {
+        @media only screen and (min-width: var.$bp-desktop) { @content; }
+    }
+
+    @if ($bp == lg-desktop) {
+        @media only screen and (min-width: var.$bp-lg-desktop) { @content; }
+    }
+}
