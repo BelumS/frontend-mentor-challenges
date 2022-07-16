@@ -7,12 +7,12 @@ $full-vh: 100vh;
 $color-white: hsl(0, 0%, 100%);
 $color-black: hsl(0, 0%, 0%);
 
-$color-blue-pale: hsl(243, 100%, 93%);
-$color-blue-gray: hsl(229, 7%, 55%);
-$color-blue-dark-1: hsl(228, 56%, 26%);
-$color-blue-dark-2: hsl(229, 57%, 11%);
+$color-gray-light: hsl(201, 11%, 66%);
+$color-gray-dark: hsl(210, 10%, 33%);
 
 //THEMES
+$theme-primary: hsl(171, 66%, 44%);
+$theme-secondary: hsl(233, 100%, 69%);
 
 //FONTS
 $font-size-xxs: 0.625rem; //10px
