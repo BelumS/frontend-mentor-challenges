@@ -10,6 +10,7 @@
         cursor: pointer;
         text-decoration: none;
         opacity: 0.5;
+        @include mix.defaultTransition;
 
         &:hover,
         &:focus {

@@ -10,6 +10,7 @@
     font-size: 1.1rem;
     align-self: stretch;
     cursor: pointer;
+    @include mix.defaultTransition;
 
     &:hover,
     &:focus {

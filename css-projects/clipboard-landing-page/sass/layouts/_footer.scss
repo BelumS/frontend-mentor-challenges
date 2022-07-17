@@ -19,6 +19,7 @@
 
         &-icon {
             cursor: pointer;
+            @include mix.defaultTransition;
 
             &:hover,
             &:focus {
