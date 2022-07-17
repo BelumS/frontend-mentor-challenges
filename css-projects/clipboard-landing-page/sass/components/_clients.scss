@@ -3,6 +3,12 @@
 .client-container {
     @include mix.flexCenterColumn;
     row-gap: 90px;
+
+    @include mix.respond(laptop) {
+        @include mix.flexCenter;
+        flex-flow: row nowrap;
+        gap: 0 100px;
+    }
 }
 
 .client-img {

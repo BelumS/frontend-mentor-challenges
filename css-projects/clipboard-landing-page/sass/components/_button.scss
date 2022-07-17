@@ -12,6 +12,11 @@
     cursor: pointer;
     @include mix.defaultTransition;
 
+    @include mix.respond(laptop) {
+        padding: 10px 20px;
+        font-size: .8rem;
+    }
+
     &:hover,
     &:focus {
         opacity: .7;

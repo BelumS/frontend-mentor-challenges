@@ -1,3 +1,5 @@
+@use "../abstracts/mix";
+
 .hero-img {
 
     &--mac,
@@ -6,13 +8,15 @@
         max-width: 330px;
         min-height: 100%;
         margin-bottom: 40px;
+
+        @include mix.respond(laptop) {
+            max-width: 90%;
+        }
     }
 
     &--mac {
-
-    }
-
-    &--devices {
+        position: relative;
+        left: -50px;
 
     }
 }

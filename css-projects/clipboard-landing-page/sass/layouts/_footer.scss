@@ -3,10 +3,16 @@
 
 .site-footer {
     @include mix.flexCenterColumn;
-    width: 100%;
+    min-width: 100%;
     background-color: whitesmoke;
     row-gap: 30px;
     padding: 50px;
+
+    @include mix.respond(laptop) {
+        @include mix.flexCenter;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
 
     &__logo {
         object-fit: cover;

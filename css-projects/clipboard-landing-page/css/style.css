@@ -21,6 +21,11 @@ html {
   max-width: 360px;
   row-gap: 120px;
 }
+@media only screen and (min-width: 992px) {
+  .container {
+    min-width: 100%;
+  }
+}
 
 body {
   font-family: "Bai Jamjuree", sans-serif;
@@ -49,9 +54,20 @@ p {
   margin: 15px 0;
   padding: 0 15px;
 }
+@media only screen and (min-width: 992px) {
+  .cta__text {
+    margin: 0;
+    width: 70%;
+  }
+}
 
 .separator {
   padding: 0 10px;
+}
+@media only screen and (min-width: 992px) {
+  .separator {
+    width: 50%;
+  }
 }
 .separator__title {
   margin-bottom: 20px;
@@ -65,6 +81,11 @@ p {
   row-gap: 15px;
   padding: 0 5px;
 }
+@media only screen and (min-width: 992px) {
+  .cta {
+    row-gap: 5px;
+  }
+}
 .cta__controls {
   display: flex;
   align-items: center;
@@ -74,6 +95,15 @@ p {
   row-gap: 20px;
   align-self: stretch;
   padding: 0 10px;
+}
+@media only screen and (min-width: 992px) {
+  .cta__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    column-gap: 20px;
+  }
 }
 
 .btn {
@@ -86,6 +116,12 @@ p {
   align-self: stretch;
   cursor: pointer;
   transition: all 0.2s;
+}
+@media only screen and (min-width: 992px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
 }
 .btn:hover, .btn:focus {
   opacity: 0.7;
@@ -105,6 +141,16 @@ p {
   min-height: 100%;
   margin-bottom: 40px;
 }
+@media only screen and (min-width: 992px) {
+  .hero-img--mac, .hero-img--devices {
+    max-width: 90%;
+  }
+}
+.hero-img--mac {
+  position: relative;
+  left: -50px;
+}
+
 .snippets-section,
 .snippets-container,
 .snippet {
@@ -114,6 +160,22 @@ p {
   flex-flow: column nowrap;
 }
 
+@media only screen and (min-width: 992px) {
+  .snippets-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+  }
+  .snippet {
+    width: 70%;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .snippet > h3 {
+    align-self: flex-start;
+  }
+}
 .snippets-container {
   row-gap: 40px;
 }
@@ -130,6 +192,15 @@ p {
   flex-flow: column nowrap;
   row-gap: 40px;
 }
+@media only screen and (min-width: 992px) {
+  .feature-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    padding: 0 80px;
+  }
+}
 
 .feature {
   display: flex;
@@ -138,6 +209,11 @@ p {
   flex-flow: column nowrap;
   row-gap: 20px;
   padding: 0 10px;
+}
+@media only screen and (min-width: 992px) {
+  .feature {
+    width: 80%;
+  }
 }
 .feature__img {
   margin-bottom: 10px;
@@ -149,6 +225,15 @@ p {
   justify-content: center;
   flex-flow: column nowrap;
   row-gap: 90px;
+}
+@media only screen and (min-width: 992px) {
+  .client-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    gap: 0 100px;
+  }
 }
 
 .client-img {
@@ -169,6 +254,12 @@ p {
   padding: 5px;
   padding-top: 30px;
 }
+@media only screen and (min-width: 992px) {
+  .header {
+    background-image: url(../images/bg-header-desktop.png);
+    min-width: inherit;
+  }
+}
 .header__logo {
   max-width: 6rem;
   min-height: 6rem;
@@ -185,10 +276,19 @@ p {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  width: 100%;
+  min-width: 100%;
   background-color: whitesmoke;
   row-gap: 30px;
   padding: 50px;
+}
+@media only screen and (min-width: 992px) {
+  .site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
 }
 .site-footer__logo {
   object-fit: cover;
@@ -216,11 +316,43 @@ p {
   row-gap: 25px;
   margin: 20px 0;
 }
+@media only screen and (min-width: 992px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 35%;
+    gap: 0 25px;
+  }
+  .nav > *:first-child {
+    order: 1;
+  }
+  .nav > *:nth-child(2) {
+    order: 4;
+  }
+  .nav > *:nth-child(3) {
+    order: 2;
+    margin-left: 60px;
+  }
+  .nav > *:nth-child(4) {
+    order: 5;
+  }
+  .nav > *:last-child {
+    order: 3;
+  }
+}
 .nav__item {
   cursor: pointer;
   text-decoration: none;
   opacity: 0.5;
   transition: all 0.2s;
+}
+@media only screen and (min-width: 992px) {
+  .nav__item {
+    margin: 10px;
+  }
 }
 .nav__item:hover, .nav__item:focus {
   color: hsl(171deg, 66%, 44%);

@@ -6,6 +6,23 @@
     @include mix.flexCenterColumn;
 }
 
+@include mix.respond(laptop) {
+    .snippets-section {
+        @include mix.flexCenter;
+        flex-flow: row nowrap;
+    }
+
+    .snippet {
+        width: 70%;
+        text-align: left;
+        align-self: flex-start;
+
+        & > h3 {
+            align-self: flex-start;
+        }
+    }
+}
+
 .snippets-container {
     row-gap: 40px;
 }

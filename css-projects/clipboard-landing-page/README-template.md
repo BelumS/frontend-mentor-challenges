@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/ss.png)
 
 ### Links
 
@@ -45,41 +45,42 @@ Users should be able to:
 - CSS custom properties
 - SASS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned how to create a landing page and refined my flexbox skills. 
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+I learned how to make a button appear like it's coming out of the page.
+```scss
+    &--green {
+        background-color: var.$theme-primary;
+        box-shadow: 0 3px 1px 1px darken(var.$theme-primary, 3%);
+    }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+I learned how to change the color of an image:
+```scss
+    &__social {
+        ...
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+        &-icon {
+            ...
+
+            &:hover,
+            &:focus {
+                filter: opacity(0.5) drop-shadow(0 0 0 var.$theme-primary); 
+            }
+        }
+    }
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to continue developing my skills with flexbox, positioning, components, and whitespace management.
 
 ### Useful resources
 

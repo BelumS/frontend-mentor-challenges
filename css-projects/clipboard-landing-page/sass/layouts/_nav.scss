@@ -6,11 +6,46 @@
     row-gap: 25px;
     margin: 20px 0;
 
+    @include mix.respond(laptop) {
+        @include mix.flexCenter;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        width: 35%;
+        gap: 0 25px;
+
+        & > * {
+            &:first-child {
+                order: 1;
+            }
+
+            &:nth-child(2) {
+                order: 4;
+            }
+
+            &:nth-child(3) {
+                order: 2;
+                margin-left: 60px;
+            }
+
+            &:nth-child(4) {
+                order: 5;
+            }
+
+            &:last-child {
+                order: 3;
+            }
+        }
+    }
+
     &__item {
         cursor: pointer;
         text-decoration: none;
         opacity: 0.5;
         @include mix.defaultTransition;
+
+        @include mix.respond(laptop) {
+            margin: 10px;
+        }
 
         &:hover,
         &:focus {

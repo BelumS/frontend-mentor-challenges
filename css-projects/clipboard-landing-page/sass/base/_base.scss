@@ -18,4 +18,8 @@ html {
     margin: 0 auto;
     max-width: 360px;
     row-gap: 120px;
+
+    @include mix.respond(laptop) {
+        min-width: 100%;
+    }
 }

@@ -11,6 +11,11 @@
     padding: 5px;
     padding-top: 30px;
 
+    @include mix.respond(laptop) {
+        background-image: url(../images/bg-header-desktop.png);
+        min-width: inherit;  
+    }
+
     &__logo {
         @include mix.box(6rem);
         object-fit: cover;

@@ -6,11 +6,21 @@
     row-gap: 15px;
     padding: 0 5px;
 
+    @include mix.respond(laptop) {
+        row-gap: 5px;
+    }
+
     &__controls {
         @include mix.flexCenterColumn;
         margin-top: 20px;
         row-gap: 20px;
         align-self: stretch;
         padding: 0 10px;
+
+        @include mix.respond(laptop) {
+            @include mix.flexCenter;
+            flex-flow: row nowrap;
+            column-gap: 20px;
+        }
     }
 }

@@ -3,12 +3,22 @@
 .feature-container {
     @include mix.flexCenterColumn;
     row-gap: 40px;
+
+    @include mix.respond(laptop) {
+        @include mix.flexCenter;
+        flex-flow: row nowrap;
+        padding: 0 80px;
+    }
 }
 
 .feature {
     @include mix.flexCenterColumn;
     row-gap: 20px;
     padding: 0 10px;
+
+    @include mix.respond(laptop) {
+        width: 80%;
+    }
 
     &__img {
         margin-bottom: 10px;
