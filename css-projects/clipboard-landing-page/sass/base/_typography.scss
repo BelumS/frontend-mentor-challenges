@@ -5,4 +5,29 @@
 body {
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: var.$font-size-lg;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: var.$color-gray-dark;
+}
+
+p {
+    color: rgba(var.$color-gray-light, 0.7);
+}
+
+.cta__text {
+    padding: 0 10px;
+}
+
+.site__text {
+
+}
+
+.lower-site-text {
+
+}
+
+.separator {
+
 }

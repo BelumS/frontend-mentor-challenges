@@ -1,0 +1,22 @@
+@use "../abstracts/var";
+@use "../abstracts/mix";
+
+.btn {
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    align-self: stretch;
+
+    &--green {
+        background-color: var.$theme-primary;
+        box-shadow: 0 3px 1px 1px darken(var.$theme-primary, 3%);
+    }
+    
+    &--blue {
+        background-color: var.$theme-secondary;
+        box-shadow: 0 3px 1px 1px darken(var.$theme-secondary, 3%);
+    }
+}

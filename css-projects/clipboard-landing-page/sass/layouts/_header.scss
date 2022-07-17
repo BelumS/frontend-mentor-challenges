@@ -1,0 +1,23 @@
+@use "../abstracts/var";
+@use "../abstracts/mix";
+
+.header {
+    @include mix.flexCenterColumn;
+    background-image: url(../images/bg-header-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    row-gap: 10px;
+    padding: 15px;
+    padding-top: 30px;
+
+    &__logo {
+        @include mix.box(6rem);
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+}

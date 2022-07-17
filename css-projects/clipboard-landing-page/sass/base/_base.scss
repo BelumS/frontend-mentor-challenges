@@ -15,5 +15,7 @@ html {
 
 .container {
     @include mix.flexCenterColumn;
-    @include mix.respBox;
+    margin: 0 auto;
+    max-width: 350px;
+    overflow-x: hidden;
 }

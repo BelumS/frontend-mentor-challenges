@@ -16,15 +16,28 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: row nowrap;
   flex-flow: column nowrap;
-  min-height: 100vh;
-  max-width: 100vw;
+  margin: 0 auto;
+  max-width: 350px;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 1.125rem;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: hsl(210deg, 10%, 33%);
+}
+
+p {
+  color: rgba(159, 171, 178, 0.7);
+}
+
+.cta__text {
+  padding: 0 10px;
 }
 
 .u-ctr-text {
@@ -53,6 +66,66 @@ body {
 }
 .u-mb-xl {
   margin-bottom: 100px !important;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 1px;
+  row-gap: 15px;
+}
+.cta__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 0 10px;
+  row-gap: 20px;
+  margin: 30px 0;
+  align-self: stretch;
+}
+
+.btn {
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  align-self: stretch;
+}
+.btn--green {
+  background-color: hsl(171deg, 66%, 44%);
+  box-shadow: 0 3px 1px 1px #24ae99;
+}
+.btn--blue {
+  background-color: hsl(233deg, 100%, 69%);
+  box-shadow: 0 3px 1px 1px #5266ff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  background-image: url(../images/bg-header-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  row-gap: 10px;
+  padding: 15px;
+  padding-top: 30px;
+}
+.header__logo {
+  max-width: 6rem;
+  min-height: 6rem;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.header__title {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
