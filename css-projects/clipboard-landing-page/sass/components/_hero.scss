@@ -1,0 +1,18 @@
+.hero-img {
+
+    &--mac,
+    &--devices {
+        object-fit: cover;
+        max-width: 330px;
+        min-height: 100%;
+        margin-bottom: 40px;
+    }
+
+    &--mac {
+
+    }
+
+    &--devices {
+
+    }
+}

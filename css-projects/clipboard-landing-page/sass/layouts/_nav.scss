@@ -1,0 +1,19 @@
+@use "../abstracts/var";
+@use "../abstracts/mix";
+
+.nav {
+    @include mix.flexCenterColumn;
+    row-gap: 25px;
+    margin: 20px 0;
+
+    &__item {
+        cursor: pointer;
+        text-decoration: none;
+        opacity: 0.5;
+
+        &:hover,
+        &:focus {
+            color: var.$theme-primary;
+        }
+    }
+}

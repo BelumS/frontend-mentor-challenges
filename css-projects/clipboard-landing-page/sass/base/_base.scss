@@ -16,6 +16,6 @@ html {
 .container {
     @include mix.flexCenterColumn;
     margin: 0 auto;
-    max-width: 350px;
-    overflow-x: hidden;
+    max-width: 360px;
+    row-gap: 120px;
 }

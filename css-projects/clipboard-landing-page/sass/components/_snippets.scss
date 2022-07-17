@@ -1,0 +1,16 @@
+@use "../abstracts/mix";
+
+.snippets-section,
+.snippets-container,
+.snippet {
+    @include mix.flexCenterColumn;
+}
+
+.snippets-container {
+    row-gap: 40px;
+}
+
+.snippet {
+    row-gap: 10px;
+    padding: 0 17px;
+}

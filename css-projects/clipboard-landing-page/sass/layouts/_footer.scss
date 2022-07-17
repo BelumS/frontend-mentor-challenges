@@ -1,0 +1,29 @@
+@use "../abstracts/var";
+@use "../abstracts/mix";
+
+.site-footer {
+    @include mix.flexCenterColumn;
+    width: 100%;
+    background-color: whitesmoke;
+    row-gap: 30px;
+    padding: 50px;
+
+    &__logo {
+        object-fit: cover;
+        max-width: 70px;
+    }
+
+    &__social {
+        @include mix.flexCenter;
+        column-gap: 30px;
+
+        &-icon {
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                filter: opacity(0.5) drop-shadow(0 0 0 var.$theme-primary); 
+            }
+        }
+    }
+}

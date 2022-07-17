@@ -1,0 +1,16 @@
+@use "../abstracts/mix";
+
+.feature-container {
+    @include mix.flexCenterColumn;
+    row-gap: 40px;
+}
+
+.feature {
+    @include mix.flexCenterColumn;
+    row-gap: 20px;
+    padding: 0 10px;
+
+    &__img {
+        margin-bottom: 10px;
+    }
+}

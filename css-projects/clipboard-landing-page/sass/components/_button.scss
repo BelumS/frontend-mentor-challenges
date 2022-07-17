@@ -9,6 +9,12 @@
     border-radius: 30px;
     font-size: 1.1rem;
     align-self: stretch;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        opacity: .7;
+    }
 
     &--green {
         background-color: var.$theme-primary;

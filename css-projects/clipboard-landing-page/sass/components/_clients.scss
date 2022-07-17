@@ -1,0 +1,11 @@
+@use "../abstracts/_mix";
+
+.client-container {
+    @include mix.flexCenterColumn;
+    row-gap: 90px;
+}
+
+.client-img {
+    object-fit: cover;
+    min-height: 100%;
+}

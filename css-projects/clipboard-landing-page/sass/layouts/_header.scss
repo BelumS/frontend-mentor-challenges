@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-position: center;
     row-gap: 10px;
-    padding: 15px;
+    padding: 5px;
     padding-top: 30px;
 
     &__logo {
@@ -19,5 +19,6 @@
 
     &__title {
         font-size: 2rem;
+        padding: 10px;
     }
 }

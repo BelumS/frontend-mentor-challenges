@@ -6,18 +6,28 @@ body {
     font-family: 'Bai Jamjuree', sans-serif;
     font-size: var.$font-size-lg;
     text-align: center;
+    line-height: 1.5;
 }
 
 h1, h2, h3 {
     color: var.$color-gray-dark;
 }
 
+h3 {
+    font-size: 1.5rem;
+}
+
 p {
     color: rgba(var.$color-gray-light, 0.7);
 }
 
+.cta__title--lower {
+    padding: 0 25px;
+}
+
 .cta__text {
-    padding: 0 10px;
+    margin: 15px 0;
+    padding: 0 15px;
 }
 
 .site__text {
@@ -29,5 +39,9 @@ p {
 }
 
 .separator {
+    padding: 0 10px;
 
+    &__title {
+        margin-bottom: 20px;
+    }
 }
