@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/BelumS/frontend-mentor-challenges/tree/main/css-projects/clipboard-landing-page)
-- Live Site URL: [Netlify](https://lambent-naiad-a39f59.netlify.app/)
+- Live Site URL: [Netlify](https://rococo-stardust-5c1d08.netlify.app/)
 
 ## My process
 
